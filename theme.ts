@@ -15,36 +15,43 @@ const theme = extendTheme({
     coolGray: "#757573",
   },
   fonts: {
-    heading: `'RobotoSlab', sans-serif`,
     headingBold: `'RobotoSlabExtraBold', sans-serif`,
     body: `'Montserrat', sans-serif`,
   },
   components: { Button: appButton },
   textStyles: {
-    heading: {
-      fontFamily: "heading",
-      fontSize: ["38px", "42px", "75px"],
-      lineHeight: "125%",
-    },
     headingBold: {
       fontFamily: "headingBold",
-      fontSize: ["38px", "42px", "75px"],
+      fontSize: ["38px", "42px", "105px"],
       lineHeight: "125%",
     },
-    subheading: {
+    subheadingBold: {
       fontFamily: "headingBold",
-      fontSize: ["24px", "26px", "48px"],
+      fontSize: ["24px", "26px", "85px"],
+      lineHeight: "135%",
+    },
+    smallHeadingBold: {
+      fontFamily: "headingBold",
+      fontSize: ["18px", "20px", "32px"],
       lineHeight: "135%",
     },
     context: {
-      fontSize: ["14px", "16px", "20px"],
-      lineHeight: "115%",
+      fontFamily: "Montserrat",
+      fontSize: ["18px", "16px", "22px"],
+      lineHeight: "125%",
+    },
+    contextBold: {
+      fontFamily: "headingBold",
+      fontSize: ["18px", "16px", "32px"],
+      lineHeight: "125%",
     },
     smContext: {
-      fontSize: ["14px", "16px"],
+      fontFamily: "Montserrat",
+      fontSize: ["16px", "16px"],
     },
     smBold: {
-      fontSize: ["17px"],
+      fontFamily: "Montserrat",
+      fontSize: ["16px"],
       fontWeight: "600",
       lineHeight: "155%",
     },

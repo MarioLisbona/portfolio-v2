@@ -4,6 +4,7 @@ import { Card } from "@chakra-ui/react";
 const HorizontalLine = () => {
   return (
     <Card
+      bg={"transparent"}
       w={"80%"}
       h={"30px"}
       align={"center"}
