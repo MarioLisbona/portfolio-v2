@@ -7,13 +7,25 @@ export default function Hero() {
   return (
     <SectionContainer>
       <Flex direction={"column"}>
-        <Text textStyle={"headingBold"}>Hi, I'm Mario.</Text>
+        <Text textStyle={"headingBold"}>
+          <Highlight
+            styles={{
+              color: "tan",
+            }}
+            query={["Mario"]}
+          >
+            Hi, I'm Mario
+          </Highlight>
+        </Text>
         <Text textStyle={"subheading"}>
           <Highlight
-            styles={{ color: "tan" }}
+            styles={{
+              color: "tan",
+            }}
             query={["Full Stack Developer"]}
-            children={"I'm a Full Stack Developer"}
-          ></Highlight>
+          >
+            I'm a Full Stack Developer
+          </Highlight>
         </Text>
         <Text
           w={{ base: "100%", lg: "55%" }}
