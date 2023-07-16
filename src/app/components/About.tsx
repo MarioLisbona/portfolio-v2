@@ -26,7 +26,11 @@ const About = () => {
         </Flex>
         <HorizontalLine />
       </Flex>
-      <Flex w={"100%"} justify={"space-between"}>
+      <Flex
+        w={"100%"}
+        direction={{ base: "column", xl: "row" }}
+        justify={"space-between"}
+      >
         <Flex w={"70%"} direction={"column"}>
           <Text textStyle={"context"} my={"1rem"}>
             I currently work for Google on Google Photos. I also toss in my ¢2
