@@ -13,7 +13,7 @@ const HorizontalLine = () => {
         content: "''",
         position: "absolute",
         top: "50%",
-        left: 15,
+        left: 0,
         borderTop: "1px solid black",
         background: "black",
         width: "100%",
