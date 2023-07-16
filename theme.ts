@@ -32,7 +32,7 @@ const theme = extendTheme({
       lineHeight: "125%",
     },
     subheading: {
-      fontFamily: "heading",
+      fontFamily: "headingBold",
       fontSize: ["24px", "26px", "48px"],
       lineHeight: "135%",
     },
