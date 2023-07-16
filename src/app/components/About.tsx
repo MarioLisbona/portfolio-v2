@@ -1,20 +1,12 @@
 "use client";
-import {
-  Flex,
-  Text,
-  Icon,
-  Box,
-  SimpleGrid,
-  GridItem,
-  Wrap,
-  WrapItem,
-  Center,
-} from "@chakra-ui/react";
+import { Flex, Text, Icon, Wrap, WrapItem, Center } from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
 import FullStopIcon from "../UI/FullStopIcon";
 import HorizontalLine from "../UI/HorizontalLine";
 import { BsTerminalFill } from "react-icons/bs";
 import TechBox from "../UI/TechBox";
+import { techStack } from "../data/techStack";
+import { aboutContent } from "../data/about.Content";
 
 const About = () => {
   return (
@@ -32,98 +24,36 @@ const About = () => {
         justify={"space-between"}
       >
         <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
-          <Text textStyle={"context"} my={"1rem"}>
-            I currently work for Google on Google Photos. I also toss in my ¢2
-            with the design systems teams from time to time (once an artist,
-            always an artist, amirite?).
-          </Text>
-          <Text textStyle={"context"} my={"1rem"}>
-            I currently work for Google on Google Photos. I also toss in my ¢2
-            with the design systems teams from time to time (once an artist,
-            always an artist, amirite?).
-          </Text>
-          <Text textStyle={"context"} my={"1rem"}>
-            I currently work for Google on Google Photos. I also toss in my ¢2
-            with the design systems teams from time to time (once an artist,
-            always an artist, amirite?).
-          </Text>
+          {aboutContent.map((item, idx) => (
+            <Text key={idx} textStyle={"context"} my={"1rem"}>
+              {item.para}
+            </Text>
+          ))}
         </Flex>
         <Flex
-          w={{ base: "100%", xl: "25%" }}
+          w={{ base: "100%", xl: "30%" }}
           direction={"column"}
           ms={{ base: "0", xl: "1rem" }}
+          mt={{ base: "1rem", xl: "0" }}
         >
           <Flex w={"100%"} align={"center"}>
             <Icon
               color={"sage"}
               as={BsTerminalFill}
-              h={"32px"}
-              w={"32px"}
+              h={{ base: "22px", lg: "32px" }}
+              w={{ base: "22px", lg: "32px" }}
               me={"1rem"}
             />
-            <Text textStyle={"smallHeadingBold"}>Tech I'm using</Text>
+            <Text textStyle={"smallHeadingBold"}>Tech I&#39;m using</Text>
           </Flex>
           <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>JavaScript</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>TypeScript</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>Python</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>HTML</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>CSS</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>Next.js</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>React</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>NodeJS</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>Express</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>Postgres</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>MongoDb</Text>
-              </TechBox>
-            </WrapItem>
-            <WrapItem>
-              <TechBox>
-                <Text textStyle={"smBold"}>Github</Text>
-              </TechBox>
-            </WrapItem>
+            {techStack.map((item, idx) => (
+              <WrapItem key={idx}>
+                <TechBox>
+                  <Text textStyle={"smBold"}>{item.label}</Text>
+                </TechBox>
+              </WrapItem>
+            ))}
           </Wrap>
         </Flex>
       </Flex>
