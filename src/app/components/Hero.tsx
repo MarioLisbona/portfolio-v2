@@ -2,6 +2,7 @@
 
 import { Button, Flex, Highlight, Icon, Text } from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
+import { FaCircle } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -16,19 +17,17 @@ export default function Hero() {
           "2xl": "15rem",
         }}
       >
-        <Flex>
-          <Text textStyle={"headingBold"}>
-            <Highlight
-              styles={{
-                color: "tan",
-              }}
-              query={["Mario"]}
-            >
-              Hi, I&#39;m Mario
-            </Highlight>
-          </Text>
-          <Icon />
-        </Flex>
+        <Text p={"0"} textStyle={"headingBold"}>
+          Hi, I&#39;m Mario
+          <Icon
+            ms={".25rem"}
+            as={FaCircle}
+            w={{ base: "10px", md: "16px", lg: "20px" }}
+            h={{ base: "10px", md: "16px", lg: "20px" }}
+            color={"tan"}
+          />
+        </Text>
+
         <Text textStyle={"subheading"}>
           <Highlight
             styles={{
