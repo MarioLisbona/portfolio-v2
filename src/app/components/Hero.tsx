@@ -2,7 +2,7 @@
 
 import { Button, Flex, Highlight, Icon, Text } from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
-import { FaCircle } from "react-icons/fa";
+import FullStopIcon from "./FullStopIcon";
 
 export default function Hero() {
   return (
@@ -19,13 +19,7 @@ export default function Hero() {
       >
         <Text p={"0"} textStyle={"headingBold"}>
           Hi, I&#39;m Mario
-          <Icon
-            ms={".25rem"}
-            as={FaCircle}
-            w={{ base: "10px", md: "16px", lg: "20px" }}
-            h={{ base: "10px", md: "16px", lg: "20px" }}
-            color={"tan"}
-          />
+          <FullStopIcon />
         </Text>
 
         <Text textStyle={"subheading"}>
