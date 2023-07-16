@@ -1,23 +1,28 @@
 "use client";
-import { Flex, Text, Icon, Wrap, WrapItem, Center } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Icon,
+  Wrap,
+  WrapItem,
+  Button,
+  Link,
+} from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
 import FullStopIcon from "../UI/FullStopIcon";
 import HorizontalLine from "../UI/HorizontalLine";
 import { BsTerminalFill } from "react-icons/bs";
+import { PiArrowRightBold } from "react-icons/pi";
+import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
 import TechBox from "../UI/TechBox";
 import { techStack } from "../data/techStack";
 import { aboutContent } from "../data/about.Content";
+import Header from "../UI/Header";
 
 const About = () => {
   return (
     <SectionContainer>
-      <Flex w={"100%"} justify={"space-between"} align={"center"}>
-        <Flex align={"flex-end"}>
-          <Text textStyle={"subheadingBold"}>About</Text>
-          <FullStopIcon />
-        </Flex>
-        <HorizontalLine />
-      </Flex>
+      <Header title={"About"} />
       <Flex
         w={"100%"}
         direction={{ base: "column", xl: "row" }}
@@ -56,6 +61,57 @@ const About = () => {
             ))}
           </Wrap>
         </Flex>
+      </Flex>
+      <Flex w={"100%"} justify={"flex-start"} align={"center"}>
+        <Text textStyle={"smallHeadingBold"} me={"1rem"}>
+          My Links
+        </Text>
+        <Icon
+          me={"1rem"}
+          as={PiArrowRightBold}
+          color={"coolGray"}
+          h={{ base: "22px", lg: "32px" }}
+          w={{ base: "22px", lg: "32px" }}
+        />
+        <Link
+          href={"https://www.linkedin.com/in/mariolisbona/"}
+          target={"_blank"}
+        >
+          <Button variant={"linkSmallBtn"}>
+            <Icon
+              aria-label={"My LinkedIn Profile"}
+              me={"1rem"}
+              as={SiLinkedin}
+              color={"sage"}
+              h={{ base: "22px", lg: "32px" }}
+              w={{ base: "22px", lg: "32px" }}
+            />
+          </Button>
+        </Link>
+        <Link href={"https://github.com/MarioLisbona/"} target={"_blank"}>
+          <Button variant={"linkSmallBtn"}>
+            <Icon
+              aria-label={"My Github Profile"}
+              me={"1rem"}
+              as={SiGithub}
+              color={"sage"}
+              h={{ base: "22px", lg: "32px" }}
+              w={{ base: "22px", lg: "32px" }}
+            />
+          </Button>
+        </Link>
+        <Link href={"https://www.instagram.com/muzzza79/"} target={"_blank"}>
+          <Button variant={"linkSmallBtn"}>
+            <Icon
+              aria-label={"My Instagram Profile"}
+              me={"1rem"}
+              as={SiInstagram}
+              color={"sage"}
+              h={{ base: "22px", lg: "32px" }}
+              w={{ base: "22px", lg: "32px" }}
+            />
+          </Button>
+        </Link>
       </Flex>
     </SectionContainer>
   );
