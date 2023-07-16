@@ -6,7 +6,16 @@ import SectionContainer from "./SectionContainer";
 export default function Hero() {
   return (
     <SectionContainer>
-      <Flex direction={"column"}>
+      <Flex
+        direction={"column"}
+        mt={{
+          base: "3rem",
+          md: "5rem",
+          lg: "10rem,",
+          xl: "12rem",
+          "2xl": "15rem",
+        }}
+      >
         <Text textStyle={"headingBold"}>
           <Highlight
             styles={{
