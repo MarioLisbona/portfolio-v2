@@ -9,14 +9,14 @@ const config: ThemeConfig = {
 const theme = extendTheme({
   config,
   colors: {
-    brandOrange: "#F14C23",
-    brandDarkBlue: "#2B2A35",
-    brandBlue: "#1B75BB",
-    brandLightBlue: "#ECF4F9",
+    sage: "#686A4E",
+    ivory: "#CFCDC2",
+    tan: "#977557",
+    coolGray: "#757573",
   },
   fonts: {
-    heading: `'Magistral', sans-serif`,
-    body: `'Poppins', sans-serif`,
+    heading: `'RobotoSlab', sans-serif`,
+    body: `'Montserrat', sans-serif`,
   },
   components: { Button: appButton },
   textStyles: {
