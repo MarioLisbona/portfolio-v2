@@ -38,6 +38,8 @@ export default function Navbar() {
         left={0}
         right={0}
         zIndex={999}
+        borderBottomColor={useColorModeValue("black", "whiteAlpha.300")}
+        boxShadow="lg"
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
