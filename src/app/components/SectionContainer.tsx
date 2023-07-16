@@ -34,6 +34,7 @@ const SectionContainer = ({
       py={py}
       mt={mt}
       bg={useColorModeValue("", "gray.900")}
+      zIndex={0}
     >
       <Container maxW="1300px" my={my}>
         {children}
