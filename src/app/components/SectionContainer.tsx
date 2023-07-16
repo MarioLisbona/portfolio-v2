@@ -22,25 +22,20 @@ const SectionContainer = ({
     md: "50px",
     lg: "80px",
   });
-  const pt = useBreakpointValue({
-    base: "80px",
-  });
-
-  const pb = useBreakpointValue({
-    base: "110px",
-    lg: "130px",
+  const py = useBreakpointValue({
+    base: "34px",
+    lg: "46px",
   });
 
   return (
     <Box
       w={"100wv"}
       px={px}
-      pt={pt}
-      pb={pb}
+      py={py}
       mt={mt}
-      bg={useColorModeValue("ivory", "whiteAlpha.50")}
+      bg={useColorModeValue("ivory", "gray.900")}
     >
-      <Container maxW="1300px" p={"0"} my={my}>
+      <Container maxW="1300px" my={my}>
         {children}
       </Container>
     </Box>

@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <>
       <Box
-        bg={useColorModeValue("ivory", "whiteAlpha.50")}
+        bg={useColorModeValue("ivory", "gray.900")}
         px={4}
         position="sticky"
         top={0}

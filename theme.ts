@@ -22,33 +22,24 @@ const theme = extendTheme({
   textStyles: {
     heading: {
       fontFamily: "heading",
-      fontSize: ["38px", "42px", "45px"],
+      fontSize: ["38px", "42px", "65px"],
       fontWeight: "700",
       lineHeight: "125%",
     },
     subheading: {
       fontFamily: "heading",
-      fontSize: ["24px", "26px", "28px"],
+      fontSize: ["24px", "26px", "48px"],
       fontWeight: "700",
       lineHeight: "135%",
     },
-    smheading: {
-      fontFamily: "heading",
-      fontSize: ["21px", "23px", "25px"],
-      fontWeight: "700",
-      lineHeight: "135%",
-    },
-    // for body context
     context: {
       fontSize: ["14px", "16px", "20px"],
       fontWeight: "400",
       lineHeight: "115%",
     },
-    // for FAQ context
     smContext: {
       fontSize: ["14px", "16px"],
     },
-    // for the context in Divider Section (suitable for lined title and its text)
     smBold: {
       fontSize: ["17px"],
       fontWeight: "600",
