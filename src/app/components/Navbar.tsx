@@ -31,15 +31,16 @@ export default function Navbar() {
   return (
     <>
       <Box
-        bg={useColorModeValue("", "gray.900")}
+        bg={useColorModeValue("white", "gray.900")}
         px={4}
-        position="sticky"
+        position="fixed"
         top={0}
         left={0}
         right={0}
-        zIndex={999}
+        zIndex={"1"}
         borderBottomColor={useColorModeValue("black", "whiteAlpha.300")}
         boxShadow="lg"
+        blur={"10px"}
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
@@ -62,7 +63,9 @@ export default function Navbar() {
             >
               {navbarLinks.map((link, idx) => (
                 <Link key={idx} href={link.href}>
-                  <Button variant={"linkBtn"}>{link.label}</Button>
+                  <Button variant={"linkBtn"}>
+                    <Text textStyle={"smBold"}>{link.label}</Text>
+                  </Button>
                 </Link>
               ))}
             </HStack>
