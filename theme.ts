@@ -16,6 +16,7 @@ const theme = extendTheme({
   },
   fonts: {
     heading: `'RobotoSlab', sans-serif`,
+    headingBold: `'RobotoSlabExtraBold', sans-serif`,
     body: `'Montserrat', sans-serif`,
   },
   components: { Button: appButton },
@@ -23,7 +24,11 @@ const theme = extendTheme({
     heading: {
       fontFamily: "heading",
       fontSize: ["38px", "42px", "65px"],
-      fontWeight: "700",
+      lineHeight: "125%",
+    },
+    headingBold: {
+      fontFamily: "headingBold",
+      fontSize: ["38px", "42px", "65px"],
       lineHeight: "125%",
     },
     subheading: {
@@ -43,7 +48,7 @@ const theme = extendTheme({
     smBold: {
       fontSize: ["17px"],
       fontWeight: "600",
-      lineHeight: { base: "175%", sm: "135%" },
+      lineHeight: "155%",
     },
   },
 });

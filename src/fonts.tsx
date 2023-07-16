@@ -12,6 +12,14 @@ const Fonts = () => (
         }
 
         @font-face {
+            font-family: 'RobotoSlabExtraBold';
+            src: local('RobotoSlab Extra Bold'), local('RobotoSlab-ExtraBold'),
+                url('/fonts/RobotoSlab-ExtraBold.ttf') format('truetype');
+            font-weight: Extra bold;
+            font-style: normal;
+        }
+
+        @font-face {
             font-family: 'Montserrat';
             src: local('Montserrat Regular'), local('Montserrat-Regular'),
                 url('/fonts/Montserrat-Regular.ttf') format('truetype');
