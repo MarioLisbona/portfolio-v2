@@ -31,7 +31,7 @@ const About = () => {
         direction={{ base: "column", xl: "row" }}
         justify={"space-between"}
       >
-        <Flex w={"70%"} direction={"column"}>
+        <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
           <Text textStyle={"context"} my={"1rem"}>
             I currently work for Google on Google Photos. I also toss in my ¢2
             with the design systems teams from time to time (once an artist,
