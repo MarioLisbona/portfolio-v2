@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Flex, Highlight, Text } from "@chakra-ui/react";
+import { Button, Flex, Highlight, Icon, Text } from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
 
 export default function Hero() {
@@ -16,16 +16,19 @@ export default function Hero() {
           "2xl": "15rem",
         }}
       >
-        <Text textStyle={"headingBold"}>
-          <Highlight
-            styles={{
-              color: "tan",
-            }}
-            query={["Mario"]}
-          >
-            Hi, I&#39;m Mario
-          </Highlight>
-        </Text>
+        <Flex>
+          <Text textStyle={"headingBold"}>
+            <Highlight
+              styles={{
+                color: "tan",
+              }}
+              query={["Mario"]}
+            >
+              Hi, I&#39;m Mario
+            </Highlight>
+          </Text>
+          <Icon />
+        </Flex>
         <Text textStyle={"subheading"}>
           <Highlight
             styles={{
