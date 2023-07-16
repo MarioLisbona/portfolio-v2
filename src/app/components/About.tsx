@@ -48,7 +48,11 @@ const About = () => {
             always an artist, amirite?).
           </Text>
         </Flex>
-        <Flex w={"25%"} direction={"column"} ms={"1rem"}>
+        <Flex
+          w={{ base: "100%", xl: "25%" }}
+          direction={"column"}
+          ms={{ base: "0", xl: "1rem" }}
+        >
           <Flex w={"100%"} align={"center"}>
             <Icon
               color={"sage"}
@@ -59,7 +63,7 @@ const About = () => {
             />
             <Text textStyle={"smallHeadingBold"}>Tech I'm using</Text>
           </Flex>
-          <Wrap mt={"1rem"} justify={"center"}>
+          <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
             <WrapItem>
               <TechBox>
                 <Text textStyle={"smBold"}>JavaScript</Text>
