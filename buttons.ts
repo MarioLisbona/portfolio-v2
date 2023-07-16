@@ -18,7 +18,7 @@ const filledSqLargeBtn = defineStyle({
 const filledSqBtn = defineStyle({
   fontSize: { base: "16px", lg: "18px" },
   h: "40px",
-  minW: "125px",
+  minW: "50px",
   fontWeight: { base: "500", lg: "600" },
   lineHeight: "1",
   background: "sage",
@@ -37,6 +37,7 @@ const whiteSqBtn = defineStyle({
   w: { base: "120px", md: "150px" },
   fontWeight: { base: "500", lg: "600", xl: "700" },
   lineHeight: "1",
+  color: "white",
   background: "sage",
   boxShadow: "0px 14px 18px rgba(0, 0, 0, .25)",
   _hover: {
@@ -82,7 +83,7 @@ export const appButton = defineStyleConfig({
   },
 
   defaultProps: {
-    size: "lg",
+    size: "md",
     variant: "filledSqLargeBtn",
   },
 });

@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <>
       <Box
-        bg={useColorModeValue("ivory", "gray.900")}
+        bg={useColorModeValue("", "gray.900")}
         px={4}
         position="sticky"
         top={0}
@@ -43,7 +43,7 @@ export default function Navbar() {
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
-            size={"md"}
+            variant={"filledSqBtn"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
@@ -68,7 +68,7 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Button onClick={toggleColorMode}>
+            <Button onClick={toggleColorMode} variant={"filledSqBtn"}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
           </Flex>

@@ -33,7 +33,7 @@ const SectionContainer = ({
       px={px}
       py={py}
       mt={mt}
-      bg={useColorModeValue("ivory", "gray.900")}
+      bg={useColorModeValue("", "gray.900")}
     >
       <Container maxW="1300px" my={my}>
         {children}

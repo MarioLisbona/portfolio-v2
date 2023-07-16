@@ -23,23 +23,21 @@ const theme = extendTheme({
   textStyles: {
     heading: {
       fontFamily: "heading",
-      fontSize: ["38px", "42px", "65px"],
+      fontSize: ["38px", "42px", "75px"],
       lineHeight: "125%",
     },
     headingBold: {
       fontFamily: "headingBold",
-      fontSize: ["38px", "42px", "65px"],
+      fontSize: ["38px", "42px", "75px"],
       lineHeight: "125%",
     },
     subheading: {
       fontFamily: "heading",
       fontSize: ["24px", "26px", "48px"],
-      fontWeight: "700",
       lineHeight: "135%",
     },
     context: {
       fontSize: ["14px", "16px", "20px"],
-      fontWeight: "400",
       lineHeight: "115%",
     },
     smContext: {
