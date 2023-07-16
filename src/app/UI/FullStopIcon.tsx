@@ -4,10 +4,11 @@ import { Icon } from "@chakra-ui/react";
 const FullStopIcon = () => {
   return (
     <Icon
-      ms={".25rem"}
+      ms={{ base: "2px", md: "5px" }}
+      mb={{ base: "6px", md: "23px" }}
       as={FaCircle}
-      w={{ base: "10px", md: "16px", lg: "20px" }}
-      h={{ base: "10px", md: "16px", lg: "20px" }}
+      w={{ base: "8px", md: "12px", lg: "16px" }}
+      h={{ base: "8px", md: "12px", lg: "16px" }}
       color={"tan"}
     />
   );
