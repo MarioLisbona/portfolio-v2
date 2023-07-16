@@ -21,26 +21,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
+import { navbarLinks } from "../data/links";
 import logo from "../../../public/images/ml-logo.png";
-
-interface NavbarLinksProps {
-  label: string;
-  href: string;
-  external: boolean;
-}
-
-const navbarLinks: Array<NavbarLinksProps> = [
-  {
-    label: "Home",
-    href: "/",
-    external: false,
-  },
-  {
-    label: "Contacts",
-    href: "/contacts",
-    external: false,
-  },
-];
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -49,9 +31,9 @@ export default function Navbar() {
   return (
     <>
       <Box
-        bg={useColorModeValue("ivory", "coolGray")}
+        bg={useColorModeValue("ivory", "whiteAlpha.50")}
         px={4}
-        position="fixed"
+        position="sticky"
         top={0}
         left={0}
         right={0}

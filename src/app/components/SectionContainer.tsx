@@ -1,5 +1,10 @@
 "use client";
-import { Box, Container, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  useBreakpointValue,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 
 const SectionContainer = ({
@@ -27,7 +32,14 @@ const SectionContainer = ({
   });
 
   return (
-    <Box w={"100wv"} px={px} pt={pt} pb={pb} mt={mt}>
+    <Box
+      w={"100wv"}
+      px={px}
+      pt={pt}
+      pb={pb}
+      mt={mt}
+      bg={useColorModeValue("ivory", "whiteAlpha.50")}
+    >
       <Container maxW="1300px" p={"0"} my={my}>
         {children}
       </Container>
