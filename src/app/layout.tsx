@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Providers } from "./providers";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Mario Lisbona | Junior Web Developer",
@@ -20,8 +21,8 @@ export default function RootLayout({
       <body>
         <Providers>
           <Navbar />
-
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

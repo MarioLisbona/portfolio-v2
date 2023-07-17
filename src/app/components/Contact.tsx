@@ -13,7 +13,8 @@ const Contact = () => {
       <Flex
         w={"100%"}
         px={"5rem"}
-        py={"2rem"}
+        pt={"2rem"}
+        py={"6rem"}
         direction={"column"}
         align={"center"}
       >
