@@ -8,7 +8,7 @@ import CustomIcon from "../UI/CustomIcon";
 
 const Contact = () => {
   return (
-    <Box id={"contact"}>
+    <Box id={"contact"} pt={"70px"} mt={"70px"}>
       <SectionContainer>
         <CenterHeader title={"Contact"} />
         <Flex
