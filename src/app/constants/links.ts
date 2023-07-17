@@ -1,5 +1,6 @@
 export interface NavbarLinksProps {
   label: string;
+  id: string;
   href: string;
   external: boolean;
 }
@@ -7,17 +8,26 @@ export interface NavbarLinksProps {
 export const navbarLinks: NavbarLinksProps[] = [
   {
     label: "About",
-    href: "/about",
+    id: "about",
+    href: "#about",
     external: false,
   },
   {
     label: "Projects",
-    href: "/projects",
+    id: "projects",
+    href: "#projects",
+    external: false,
+  },
+  {
+    label: "Experience",
+    id: "experience",
+    href: "#experience",
     external: false,
   },
   {
     label: "Contact",
-    href: "/contact",
+    id: "contact",
+    href: "#contact",
     external: false,
   },
 ];

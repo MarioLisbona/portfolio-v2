@@ -3,16 +3,9 @@
 import { Button, Flex, Highlight, Icon, Link, Text } from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
 import { FaCircle } from "react-icons/fa";
+import { handleLinkClick } from "../lib/utils";
 
 export default function Hero() {
-  const handleLinkClick = (event: any, targetId: string) => {
-    event.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <SectionContainer>
       <Flex

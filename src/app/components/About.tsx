@@ -7,6 +7,7 @@ import {
   WrapItem,
   Button,
   Link,
+  Box,
 } from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
 import FullStopIcon from "../UI/FullStopIcon";
@@ -23,72 +24,74 @@ import SocialIcon from "../UI/SocialIcon";
 
 const About = () => {
   return (
-    <SectionContainer>
-      <Header title={"About"} />
-      <Flex
-        w={"100%"}
-        direction={{ base: "column", xl: "row" }}
-        justify={"space-between"}
-      >
-        <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
-          {aboutContent.map((item, idx) => (
-            <Text key={idx} textStyle={"context"} my={"1rem"}>
-              {item.para}
-            </Text>
-          ))}
-        </Flex>
+    <Box id={"about"} pt={"70px"} mt={"70px"}>
+      <SectionContainer>
+        <Header title={"About"} />
         <Flex
-          w={{ base: "100%", xl: "30%" }}
-          direction={"column"}
-          ms={{ base: "0", xl: "1rem" }}
-          mt={{ base: "1rem", xl: "0" }}
+          w={"100%"}
+          direction={{ base: "column", xl: "row" }}
+          justify={"space-between"}
         >
-          <Flex w={"100%"} align={"center"}>
-            <CustomIcon color={"sage"} icon={BsTerminalFill} me={"1rem"} />
-            <Text textStyle={"smallHeadingBold"}>Tech I&#39;m using</Text>
-          </Flex>
-          <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
-            {techStack.map((item, idx) => (
-              <WrapItem key={idx}>
-                <TechBox>
-                  <Text textStyle={"smBold"}>{item.label}</Text>
-                </TechBox>
-              </WrapItem>
+          <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
+            {aboutContent.map((item, idx) => (
+              <Text key={idx} textStyle={"context"} my={"1rem"}>
+                {item.para}
+              </Text>
             ))}
-          </Wrap>
+          </Flex>
+          <Flex
+            w={{ base: "100%", xl: "30%" }}
+            direction={"column"}
+            ms={{ base: "0", xl: "1rem" }}
+            mt={{ base: "1rem", xl: "0" }}
+          >
+            <Flex w={"100%"} align={"center"}>
+              <CustomIcon color={"sage"} icon={BsTerminalFill} me={"1rem"} />
+              <Text textStyle={"smallHeadingBold"}>Tech I&#39;m using</Text>
+            </Flex>
+            <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
+              {techStack.map((item, idx) => (
+                <WrapItem key={idx}>
+                  <TechBox>
+                    <Text textStyle={"smBold"}>{item.label}</Text>
+                  </TechBox>
+                </WrapItem>
+              ))}
+            </Wrap>
+          </Flex>
         </Flex>
-      </Flex>
-      <Flex w={"100%"} justify={"flex-start"} align={"center"}>
-        <Text textStyle={"smallHeadingBold"} me={"1rem"}>
-          My Links
-        </Text>
-        <CustomIcon color={"coolGray"} icon={PiArrowRightBold} me={"1rem"} />
-        <SocialIcon href={"https://www.linkedin.com/in/mariolisbona/"}>
-          <CustomIcon
-            color={"sage"}
-            icon={SiLinkedin}
-            me={"1rem"}
-            label={"My LinkedIn Profile"}
-          />
-        </SocialIcon>
-        <SocialIcon href={"https://github.com/MarioLisbona/"}>
-          <CustomIcon
-            color={"sage"}
-            icon={SiGithub}
-            me={"1rem"}
-            label={"My Github Profile"}
-          />
-        </SocialIcon>
-        <SocialIcon href={"https://www.instagram.com/muzzza79/"}>
-          <CustomIcon
-            color={"sage"}
-            icon={SiInstagram}
-            me={"1rem"}
-            label={"My Instagram Profile"}
-          />
-        </SocialIcon>
-      </Flex>
-    </SectionContainer>
+        <Flex w={"100%"} justify={"flex-start"} align={"center"}>
+          <Text textStyle={"smallHeadingBold"} me={"1rem"}>
+            My Links
+          </Text>
+          <CustomIcon color={"coolGray"} icon={PiArrowRightBold} me={"1rem"} />
+          <SocialIcon href={"https://www.linkedin.com/in/mariolisbona/"}>
+            <CustomIcon
+              color={"sage"}
+              icon={SiLinkedin}
+              me={"1rem"}
+              label={"My LinkedIn Profile"}
+            />
+          </SocialIcon>
+          <SocialIcon href={"https://github.com/MarioLisbona/"}>
+            <CustomIcon
+              color={"sage"}
+              icon={SiGithub}
+              me={"1rem"}
+              label={"My Github Profile"}
+            />
+          </SocialIcon>
+          <SocialIcon href={"https://www.instagram.com/muzzza79/"}>
+            <CustomIcon
+              color={"sage"}
+              icon={SiInstagram}
+              me={"1rem"}
+              label={"My Instagram Profile"}
+            />
+          </SocialIcon>
+        </Flex>
+      </SectionContainer>
+    </Box>
   );
 };
 
