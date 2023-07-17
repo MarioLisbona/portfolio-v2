@@ -2,18 +2,12 @@ import {
   CardBody,
   Image,
   Stack,
-  Heading,
   Text,
-  Divider,
-  CardFooter,
-  ButtonGroup,
   Card,
   Flex,
   Link,
   Icon,
   Button,
-  Grid,
-  GridItem,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { SiGithub } from "react-icons/si";

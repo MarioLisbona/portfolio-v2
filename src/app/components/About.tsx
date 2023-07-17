@@ -18,6 +18,7 @@ import TechBox from "../UI/TechBox";
 import { techStack } from "../data/techStack";
 import { aboutContent } from "../data/about.Content";
 import Header from "../UI/Header";
+import CustomIcon from "../UI/CustomIcon";
 
 const About = () => {
   return (
@@ -42,14 +43,10 @@ const About = () => {
           mt={{ base: "1rem", xl: "0" }}
         >
           <Flex w={"100%"} align={"center"}>
-            <Icon
-              color={"sage"}
-              as={BsTerminalFill}
-              h={{ base: "22px", lg: "32px" }}
-              w={{ base: "22px", lg: "32px" }}
-              me={"1rem"}
-            />
-            <Text textStyle={"smallHeadingBold"}>Tech I&#39;m using</Text>
+            <CustomIcon color={"sage"} icon={BsTerminalFill} />
+            <Text ms={"1rem"} textStyle={"smallHeadingBold"}>
+              Tech I&#39;m using
+            </Text>
           </Flex>
           <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
             {techStack.map((item, idx) => (
