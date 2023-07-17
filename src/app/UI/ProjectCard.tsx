@@ -15,7 +15,19 @@ import { HiExternalLink } from "react-icons/hi";
 import SocialIcon from "./SocialIcon";
 import CustomIcon from "./CustomIcon";
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  title,
+  tech,
+  content,
+  repo,
+  site,
+}: {
+  title: string;
+  tech: string;
+  content: string;
+  repo: string;
+  site?: string;
+}) => {
   return (
     <Card
       maxW="lg"
@@ -30,7 +42,7 @@ const ProjectCard = () => {
         />
         <Stack mt="6" spacing="3">
           <Flex w={"100%"} align={"center"} justify={"space-between"}>
-            <Text textStyle={"extraSmallHeadingBold"}>Living room Sofa</Text>
+            <Text textStyle={"extraSmallHeadingBold"}>{title}</Text>
             <Flex>
               <SocialIcon href={"https://github.com/MarioLisbona/"}>
                 <CustomIcon
@@ -52,14 +64,10 @@ const ProjectCard = () => {
           </Flex>
           <Flex w={"100%"} justify={"flex-start"}>
             <Text textStyle={"smBold"} color={"tan"}>
-              tech-used-in-project
+              {tech}
             </Text>
           </Flex>
-          <Text textStyle={"context"}>
-            This sofa is perfect for modern tropical spaces, baroque inspired
-            spaces, earthy toned spaces and for people who love a chic design
-            with a sprinkle of vintage design.
-          </Text>
+          <Text textStyle={"context"}>{content}</Text>
           <Text color="tan" fontSize="2xl">
             Learn More
           </Text>
