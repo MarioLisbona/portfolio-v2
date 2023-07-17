@@ -23,6 +23,7 @@ import {
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { navbarLinks } from "../constants/links";
 import logo from "../../../public/images/ml-logo.png";
+import { handleLinkClick } from "../lib/utils";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -51,7 +52,10 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Link href={"/"}>
+            <Link
+              href={"#hero"}
+              onClick={(event) => handleLinkClick(event, "hero")}
+            >
               <Box>
                 <Image boxSize={"50px"} src={logo.src} alt={"Resonate logo"} />
               </Box>
@@ -62,7 +66,11 @@ export default function Navbar() {
               display={{ base: "none", md: "flex" }}
             >
               {navbarLinks.map((link, idx) => (
-                <Link key={idx} href={link.href}>
+                <Link
+                  key={idx}
+                  href={link.href}
+                  onClick={(event) => handleLinkClick(event, link.id)}
+                >
                   <Button variant={"linkBtn"}>
                     <Text textStyle={"smBold"}>{link.label}</Text>
                   </Button>
