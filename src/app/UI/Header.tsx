@@ -2,7 +2,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import FullStopIcon from "./FullStopIcon";
 import HorizontalLine from "./HorizontalLine";
 
-const Header = ({ title, reverse }: { title: string; reverse?: string }) => {
+const Header = ({ title, reverse }: { title: string; reverse?: boolean }) => {
   return (
     <Flex
       w={"100%"}
