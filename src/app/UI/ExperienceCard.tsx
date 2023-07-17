@@ -33,7 +33,9 @@ const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
             <Text textStyle={"smBold"}>{exp.location}</Text>
           </Flex>
 
-          <Text textStyle={"context"}>{exp.description}</Text>
+          <Text textStyle={"context"} mb={"0.5rem"}>
+            {exp.description}
+          </Text>
           <Flex>
             <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
               {exp.techStack.map((tech, idx) => (
