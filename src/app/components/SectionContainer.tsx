@@ -17,7 +17,7 @@ const SectionContainer = ({
   mt?: any;
 }) => {
   const px = useBreakpointValue({
-    base: "16px",
+    base: "0px",
     sm: "20px",
     md: "30px",
     lg: "40px",
