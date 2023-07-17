@@ -7,9 +7,18 @@ import {
   Divider,
   CardFooter,
   ButtonGroup,
-  Button,
   Card,
+  Flex,
+  Link,
+  Icon,
+  Button,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
+import HorizontalLine from "./HorizontalLine";
+import SmallHorizontalLine from "./SmallHorizontalLine";
+import { SiGithub } from "react-icons/si";
+import { HiExternalLink } from "react-icons/hi";
 
 const ProjectCard = () => {
   return (

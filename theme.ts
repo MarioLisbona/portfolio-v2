@@ -35,6 +35,11 @@ const theme = extendTheme({
       fontSize: ["18px", "20px", "32px"],
       lineHeight: "135%",
     },
+    extraSmallHeadingBold: {
+      fontFamily: "headingBold",
+      fontSize: ["12px", "16px", "22px"],
+      lineHeight: "135%",
+    },
     context: {
       fontFamily: "Montserrat",
       fontSize: ["18px", "16px", "22px"],
