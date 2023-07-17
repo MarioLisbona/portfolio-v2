@@ -73,6 +73,15 @@ const linkBtn = defineStyle({
   },
 });
 
+const link = defineStyle({
+  fontSize: { base: "16px", lg: "18px" },
+  h: { base: "24px", lg: "54px" },
+  padding: "0",
+  fontWeight: { base: "400", lg: "500" },
+  lineHeight: "1",
+  color: "tan",
+});
+
 export const appButton = defineStyleConfig({
   variants: {
     filledSqLargeBtn,
@@ -80,6 +89,7 @@ export const appButton = defineStyleConfig({
     whiteSqBtn,
     linkBtn,
     linkSmallBtn,
+    link,
   },
 
   defaultProps: {
