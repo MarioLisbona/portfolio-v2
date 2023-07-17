@@ -29,14 +29,16 @@ const Contact = () => {
           </Link>
           if you prefer connecting on social media.
         </Text>
-        <Flex mt={"1rem"} align={"center"}>
-          <Flex>
-            <CustomIcon icon={MdEmail} me={"0.5rem"} />
+        <Link href={"mailto:mario.lisbona@gmail.com"} _hover={{ color: "tan" }}>
+          <Flex mt={"1rem"} align={"center"}>
+            <Flex>
+              <CustomIcon icon={MdEmail} me={"0.5rem"} />
+            </Flex>
+            <Flex>
+              <Text textStyle={"contextBold"}>mario.lisbona@gmail.com</Text>
+            </Flex>
           </Flex>
-          <Flex>
-            <Text textStyle={"contextBold"}>mario.lisbona@gmail.com</Text>
-          </Flex>
-        </Flex>
+        </Link>
       </Flex>
     </SectionContainer>
   );
