@@ -12,6 +12,8 @@ import {
 } from "@chakra-ui/react";
 import { SiGithub } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
+import SocialIcon from "./SocialIcon";
+import CustomIcon from "./CustomIcon";
 
 const ProjectCard = () => {
   return (
@@ -30,36 +32,22 @@ const ProjectCard = () => {
           <Flex w={"100%"} align={"center"} justify={"space-between"}>
             <Text textStyle={"extraSmallHeadingBold"}>Living room Sofa</Text>
             <Flex>
-              <Link
-                href={"https://www.linkedin.com/in/mariolisbona/"}
-                target={"_blank"}
-              >
-                <Button variant={"linkSmallBtn"}>
-                  <Icon
-                    aria-label={"My LinkedIn Profile"}
-                    me={"1rem"}
-                    as={SiGithub}
-                    color={"sage"}
-                    h={{ base: "22px", lg: "32px" }}
-                    w={{ base: "22px", lg: "32px" }}
-                  />
-                </Button>
-              </Link>
-              <Link
-                href={"https://www.linkedin.com/in/mariolisbona/"}
-                target={"_blank"}
-              >
-                <Button variant={"linkSmallBtn"}>
-                  <Icon
-                    aria-label={"My LinkedIn Profile"}
-                    me={"1rem"}
-                    as={HiExternalLink}
-                    color={"sage"}
-                    h={{ base: "22px", lg: "32px" }}
-                    w={{ base: "22px", lg: "32px" }}
-                  />
-                </Button>
-              </Link>
+              <SocialIcon href={"https://github.com/MarioLisbona/"}>
+                <CustomIcon
+                  color={"sage"}
+                  icon={SiGithub}
+                  me={"1rem"}
+                  label={"Project Github"}
+                />
+              </SocialIcon>
+              <SocialIcon href={"https://github.com/MarioLisbona/"}>
+                <CustomIcon
+                  color={"sage"}
+                  icon={HiExternalLink}
+                  me={"1rem"}
+                  label={"Project Live Site"}
+                />
+              </SocialIcon>
             </Flex>
           </Flex>
           <Flex w={"100%"} justify={"flex-start"}>
