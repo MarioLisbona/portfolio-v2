@@ -17,7 +17,7 @@ const Projects = () => {
                 <ProjectCard
                   title={proj.title}
                   tech={proj.tech}
-                  content={proj.content}
+                  content={`${proj.content.substring(0, 150)}....`}
                   repo={proj.repo}
                   site={proj.site}
                 />
