@@ -4,17 +4,19 @@ import { Wrap, Flex, WrapItem, Center } from "@chakra-ui/react";
 import ProjectCard from "../UI/ProjectCard";
 import SectionContainer from "./SectionContainer";
 import { projectsData } from "../constants/projectsData";
+import waveform from "@public/images/waveform-editor.png";
 
 const Projects = () => {
   return (
     <SectionContainer>
       <Header title="Projects" reverse />
-      <Flex w={"100%"} px={"2rem"}>
+      <Flex w={"100%"} justify={"center"}>
         <Wrap spacing="50px">
           {projectsData.map((proj, idx) => (
             <WrapItem key={idx}>
               <Center>
                 <ProjectCard
+                  image={proj.image}
                   title={proj.title}
                   tech={proj.tech}
                   content={`${proj.content.substring(0, 150)}....`}
