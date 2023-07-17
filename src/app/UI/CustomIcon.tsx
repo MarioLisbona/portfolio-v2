@@ -3,14 +3,14 @@ import { Icon } from "@chakra-ui/react";
 import { IconType } from "react-icons/lib";
 
 const CustomIcon = ({
-  color,
   icon,
+  color,
   ms,
   me,
   label,
 }: {
-  color: string;
   icon: IconType;
+  color?: string;
   ms?: string;
   me?: string;
   label?: string;
