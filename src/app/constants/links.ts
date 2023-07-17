@@ -1,4 +1,10 @@
-export const navbarLinks: Array<NavbarLinksProps> = [
+export interface NavbarLinksProps {
+  label: string;
+  href: string;
+  external: boolean;
+}
+
+export const navbarLinks: NavbarLinksProps[] = [
   {
     label: "About",
     href: "/about",
