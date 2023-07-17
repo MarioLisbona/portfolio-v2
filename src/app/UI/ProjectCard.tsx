@@ -26,7 +26,7 @@ const ProjectCard = ({
   tech: string;
   content: string;
   repo: string;
-  site?: string;
+  site: string;
 }) => {
   return (
     <Card
@@ -44,7 +44,7 @@ const ProjectCard = ({
           <Flex w={"100%"} align={"center"} justify={"space-between"}>
             <Text textStyle={"extraSmallHeadingBold"}>{title}</Text>
             <Flex>
-              <SocialIcon href={"https://github.com/MarioLisbona/"}>
+              <SocialIcon href={repo}>
                 <CustomIcon
                   color={"sage"}
                   icon={SiGithub}
@@ -52,7 +52,7 @@ const ProjectCard = ({
                   label={"Project Github"}
                 />
               </SocialIcon>
-              <SocialIcon href={"https://github.com/MarioLisbona/"}>
+              <SocialIcon href={site}>
                 <CustomIcon
                   color={"sage"}
                   icon={HiExternalLink}

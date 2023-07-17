@@ -18,6 +18,8 @@ const Projects = () => {
                   title={proj.title}
                   tech={proj.tech}
                   content={proj.content}
+                  repo={proj.repo}
+                  site={proj.site}
                 />
               </Center>
             </WrapItem>

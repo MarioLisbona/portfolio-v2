@@ -21,6 +21,7 @@ export const projectsData = [
     content:
       "This API web server was built with Python, Flask and PostgreSQL. It gives the users access to full CRUD operations on the data stored in the database. Users are authenticated with JWT tokens after they have successfully registered to the platform. Registered users can make posts to a variety of channels in the forum, reply to posts and delete their own posts and replies. Users with administration rights can delete any post or reply, issue warnings to users and delete users from the forum. There is also an endpoint to display forum statistics.",
     repo: "https://github.com/MarioLisbona/CA-T2A2-API-Webserver",
+    site: "https://travellersforum.netlify.app/",
   },
   {
     title: "Contacts App",
@@ -28,5 +29,6 @@ export const projectsData = [
     content:
       "This is a contacts book Terminal Application written in Python. I've used the Rich Python library to create the interface and used TinyDB, a document-orientated database library to allow for persistent storage and retrieval of data entered into the application..",
     repo: "https://github.com/MarioLisbona/CA-T1A3-terminal-app",
+    site: "https://travellersforum.netlify.app/",
   },
 ];
