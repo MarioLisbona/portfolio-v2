@@ -3,14 +3,16 @@ import {
   Flex,
   Stack,
   CardBody,
-  Heading,
+  Wrap,
   CardFooter,
   Button,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { ExperienceDataProps } from "../constants/ExperienceData";
+import TechBox from "./TechBox";
 
-const ExperienceCard = () => {
+const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
   return (
     <Card
       bg={useColorModeValue("ivory", "whiteAlpha.50")}
@@ -20,28 +22,28 @@ const ExperienceCard = () => {
     >
       <Stack>
         <CardBody>
-          <Flex w={"100%"} justify={"space-between"}>
-            <Text textStyle={"extraSmallHeadingBold"}>Edit on The Spot</Text>
-            <Text textStyle={"smBold"}>May, 2023 - Present</Text>
+          <Flex w={"100%"} justify={"space-between"} mb={"0.5rem"}>
+            <Text textStyle={"extraSmallHeadingBold"}>{exp.company}</Text>
+            <Text textStyle={"smBold"}>{exp.dates}</Text>
           </Flex>
-          <Flex w={"100%"} justify={"space-between"}>
+          <Flex w={"100%"} justify={"space-between"} mb={"0.5rem"}>
             <Text color={"tan"} textStyle={"extraSmallHeadingBold"}>
-              Software Developer
+              {exp.title}
             </Text>
-            <Text textStyle={"smBold"}>Sydney (Remote)</Text>
+            <Text textStyle={"smBold"}>{exp.location}</Text>
           </Flex>
 
-          <Text textStyle={"context"}>
-            Caffè latte is a coffee beverage of Italian origin made with
-            espresso and steamed milk.
-          </Text>
+          <Text textStyle={"context"}>{exp.description}</Text>
+          <Flex>
+            <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
+              {exp.techStack.map((tech, idx) => (
+                <TechBox key={idx}>
+                  <Text textStyle={"smBold"}>{tech}</Text>
+                </TechBox>
+              ))}
+            </Wrap>
+          </Flex>
         </CardBody>
-
-        <CardFooter>
-          <Button variant="solid" colorScheme="blue">
-            Buy Latte
-          </Button>
-        </CardFooter>
       </Stack>
     </Card>
   );

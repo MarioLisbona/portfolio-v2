@@ -3,13 +3,13 @@ import Header from "../UI/Header";
 import { Wrap, Flex, WrapItem, Center } from "@chakra-ui/react";
 import ProjectCard from "../UI/ProjectCard";
 import SectionContainer from "./SectionContainer";
-import { projectsData } from "../data/projectsData";
+import { projectsData } from "../constants/projectsData";
 
 const Projects = () => {
   return (
     <SectionContainer>
       <Header title="Projects" reverse />
-      <Flex w={"100%"} p={"2rem"}>
+      <Flex w={"100%"} px={"2rem"}>
         <Wrap spacing="50px">
           {projectsData.map((proj, idx) => (
             <WrapItem key={idx}>

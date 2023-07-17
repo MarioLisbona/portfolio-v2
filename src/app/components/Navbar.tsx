@@ -21,7 +21,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { navbarLinks } from "../data/links";
+import { navbarLinks } from "../constants/links";
 import logo from "../../../public/images/ml-logo.png";
 
 export default function Navbar() {
