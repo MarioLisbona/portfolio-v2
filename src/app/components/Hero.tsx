@@ -1,10 +1,18 @@
 "use client";
 
-import { Button, Flex, Highlight, Icon, Text } from "@chakra-ui/react";
+import { Button, Flex, Highlight, Icon, Link, Text } from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
 import { FaCircle } from "react-icons/fa";
 
 export default function Hero() {
+  const handleLinkClick = (event: any, targetId: string) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <SectionContainer>
       <Flex
@@ -41,9 +49,14 @@ export default function Hero() {
           last year and a half. Lets connect!
         </Text>
         <Flex>
-          <Button variant={"whiteSqBtn"} my={"2.5rem"}>
-            Contact me
-          </Button>
+          <Link
+            href={"#contact"}
+            onClick={(event) => handleLinkClick(event, "contact")}
+          >
+            <Button variant={"whiteSqBtn"} my={"2.5rem"}>
+              Contact me
+            </Button>
+          </Link>
         </Flex>
       </Flex>
     </SectionContainer>
