@@ -56,9 +56,9 @@ const theme = extendTheme({
     },
     smBold: {
       fontFamily: "Montserrat",
-      fontSize: ["16px"],
+      fontSize: ["18px"],
       fontWeight: "600",
-      lineHeight: "155%",
+      lineHeight: "125%",
     },
   },
 });
