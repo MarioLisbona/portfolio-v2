@@ -9,7 +9,7 @@ export interface ProjectDataProps {
 
 export const projectsData: ProjectDataProps[] = [
   {
-    thumbnail: "/images/peaksJS-waveform-editor.png",
+    thumbnail: "/images/waveform-prototype.png",
     title: "Waveform Editor",
     tech: "React-Peaks.js-ChakraUI",
     content:
@@ -18,7 +18,7 @@ export const projectsData: ProjectDataProps[] = [
     site: "https://travellersforum.netlify.app/",
   },
   {
-    thumbnail: "/images/travelers-forum-client.png",
+    thumbnail: "/images/travellers-forum-front-end.png",
     title: "Traveller's Forum",
     tech: "MongoDB-Express-React-NodeJs",
     content:
