@@ -89,7 +89,11 @@ export default function Navbar() {
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {navbarLinks.map((link, idx) => (
-                <Link key={idx} href={link.href}>
+                <Link
+                  key={idx}
+                  href={link.href}
+                  onClick={(event) => handleLinkClick(event, link.id)}
+                >
                   <Button variant={"linkSmallBtn"}>{link.label}</Button>
                 </Link>
               ))}
