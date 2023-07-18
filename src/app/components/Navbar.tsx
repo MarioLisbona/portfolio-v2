@@ -23,7 +23,7 @@ import {
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { navbarLinks } from "../constants/links";
 import logo from "../../../public/images/ml-logo.png";
-import { handleLinkClick } from "../lib/utils";
+import { handleLinkClick, handleMobileNavClick } from "../lib/utils";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -92,7 +92,15 @@ export default function Navbar() {
                 <Link
                   key={idx}
                   href={link.href}
-                  onClick={(event) => handleLinkClick(event, link.id)}
+                  onClick={(event) =>
+                    handleMobileNavClick(
+                      event,
+                      link.id,
+                      isOpen,
+                      onOpen,
+                      onClose
+                    )
+                  }
                 >
                   <Button variant={"linkSmallBtn"}>{link.label}</Button>
                 </Link>
