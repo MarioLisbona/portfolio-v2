@@ -1,4 +1,5 @@
 export interface ProjectDataProps {
+  thumbnail: string;
   title: string;
   tech: string;
   content: string;
@@ -8,6 +9,7 @@ export interface ProjectDataProps {
 
 export const projectsData: ProjectDataProps[] = [
   {
+    thumbnail: "/images/peaksJS-waveform-editor.png",
     title: "Waveform Editor",
     tech: "React-Peaks.js-ChakraUI",
     content:
@@ -16,6 +18,7 @@ export const projectsData: ProjectDataProps[] = [
     site: "https://travellersforum.netlify.app/",
   },
   {
+    thumbnail: "/images/travelers-forum-client.png",
     title: "Traveller's Forum",
     tech: "MongoDB-Express-React-NodeJs",
     content:
@@ -24,6 +27,7 @@ export const projectsData: ProjectDataProps[] = [
     site: "https://travellersforum.netlify.app/",
   },
   {
+    thumbnail: "/images/forum-api.png",
     title: "Forum",
     tech: "Python-Flask-Postgres",
     content:
@@ -31,13 +35,15 @@ export const projectsData: ProjectDataProps[] = [
     repo: "https://github.com/MarioLisbona/CA-T2A2-API-Webserver",
   },
   {
+    thumbnail: "/images/contacts-app.png",
     title: "Contacts App",
-    tech: "Python",
+    tech: "Python-bash",
     content:
       "This is a contacts book Terminal Application written in Python. I've used the Rich Python library to create the interface and used TinyDB, a document-orientated database library to allow for persistent storage and retrieval of data entered into the application..",
     repo: "https://github.com/MarioLisbona/CA-T1A3-terminal-app",
   },
   {
+    thumbnail: "/images/etch-a-sketch.png",
     title: "Etch-a-sketch",
     tech: "HTML-CSS-JavaScript",
     content:
