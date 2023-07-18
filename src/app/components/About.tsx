@@ -24,7 +24,7 @@ import SocialIcon from "../UI/SocialIcon";
 
 const About = () => {
   return (
-    <Box id={"about"} pt={"70px"} mt={"70px"}>
+    <Box id={"about"} pt={"70px"} mt={"-70px"}>
       <SectionContainer>
         <Header title={"About"} />
         <Flex
@@ -60,7 +60,7 @@ const About = () => {
             </Wrap>
           </Flex>
         </Flex>
-        <Flex w={"100%"} justify={"flex-start"} align={"center"}>
+        <Flex w={"100%"} justify={"flex-start"} align={"center"} my={"1rem"}>
           <Text textStyle={"smallHeadingBold"} me={"1rem"}>
             My Links
           </Text>

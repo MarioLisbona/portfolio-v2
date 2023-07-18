@@ -8,14 +8,13 @@ import CustomIcon from "../UI/CustomIcon";
 
 const Contact = () => {
   return (
-    <Box id={"contact"} pt={"70px"} mt={"70px"}>
+    <Box id={"contact"} pt={"70px"} mt={"-70px"}>
       <SectionContainer>
         <CenterHeader title={"Contact"} />
         <Flex
           w={"100%"}
           px={"5rem"}
-          pt={"2rem"}
-          py={"6rem"}
+          // py={"6rem"}
           direction={"column"}
           align={"center"}
         >

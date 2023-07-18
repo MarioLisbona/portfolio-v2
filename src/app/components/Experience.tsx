@@ -7,7 +7,7 @@ import { experienceData } from "../constants/ExperienceData";
 
 const Experience = () => {
   return (
-    <Box id={"experience"} pt={"70px"} mt={"70px"}>
+    <Box id={"experience"} pt={"70px"} mt={"-70px"}>
       <SectionContainer>
         <Header title={"Experience"} />
         <Flex w={"100%"} direction={"column"}>

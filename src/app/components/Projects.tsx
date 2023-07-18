@@ -7,7 +7,7 @@ import { projectsData } from "../constants/projectsData";
 
 const Projects = () => {
   return (
-    <Box id={"projects"} pt={"70px"} mt={"70px"}>
+    <Box id={"projects"} pt={"70px"} mt={"-70px"}>
       <SectionContainer>
         <Header title="Projects" reverse />
         <Flex w={"100%"}>
