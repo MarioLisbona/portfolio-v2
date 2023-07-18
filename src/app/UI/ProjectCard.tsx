@@ -1,6 +1,6 @@
 import {
   CardBody,
-  Image,
+  // Image,
   Stack,
   Text,
   Card,
@@ -8,8 +8,10 @@ import {
   Link,
   Icon,
   Button,
+  Wrap,
   useColorModeValue,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
 import SocialIcon from "./SocialIcon";
@@ -17,12 +19,14 @@ import CustomIcon from "./CustomIcon";
 import Parser from "html-react-parser";
 
 const ProjectCard = ({
+  thumbnail,
   title,
   tech,
   content,
   repo,
   site,
 }: {
+  thumbnail: string;
   title: string;
   tech: string;
   content: string;
@@ -36,11 +40,19 @@ const ProjectCard = ({
       boxShadow={"lg"}
     >
       <CardBody>
-        <Image
+        {/* <Image
           src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
           alt="Green double couch with wooden legs"
           borderRadius="lg"
-        />
+        /> */}
+        <Flex justify="center">
+          <Image
+            src={thumbnail}
+            height={300}
+            width={600}
+            alt={`Screenshot of ${title} project`}
+          />
+        </Flex>
         <Stack mt="6" spacing="3">
           <Flex w={"100%"} align={"center"} justify={"space-between"}>
             <Text textStyle={"extraSmallHeadingBold"}>{title}</Text>

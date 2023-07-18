@@ -16,6 +16,7 @@ const Projects = () => {
               <WrapItem key={idx}>
                 <Center>
                   <ProjectCard
+                    thumbnail={proj.thumbnail}
                     title={proj.title}
                     tech={proj.tech}
                     content={`${proj.content.substring(0, 150)}....`}
