@@ -10,7 +10,7 @@ const Header = ({ title, reverse }: { title: string; reverse?: boolean }) => {
       align={"center"}
       direction={reverse ? "row-reverse" : "row"}
     >
-      <Flex align={"flex-end"}>
+      <Flex align={"flex-end"} my={"1rem"}>
         <Text textStyle={"subheadingBold"}>{title}</Text>
         <FullStopIcon />
       </Flex>
