@@ -46,9 +46,8 @@ export default function Hero() {
             textStyle={"contextBold"}
             mt={"1rem"}
           >
-            After leaving a 20 year career in media and live events to enter the
-            tech field, I&#39;ve been developing full stack applications for the
-            last year and a half. Lets connect!
+            I&#39;ve been developing full stack applications for the last year
+            and a half. Lets connect!
           </Text>
           <Flex>
             <Link

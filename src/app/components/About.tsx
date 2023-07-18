@@ -21,6 +21,7 @@ import { aboutContent } from "../constants/aboutContent";
 import Header from "../UI/Header";
 import CustomIcon from "../UI/CustomIcon";
 import SocialIcon from "../UI/SocialIcon";
+import Parser from "html-react-parser";
 
 const About = () => {
   return (
@@ -33,11 +34,14 @@ const About = () => {
           justify={"space-between"}
         >
           <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
-            {aboutContent.map((item, idx) => (
+            {/* {aboutContent.map((item, idx) => (
               <Text key={idx} textStyle={"context"} my={"1rem"}>
                 {item.para}
               </Text>
-            ))}
+            ))} */}
+            <Text textStyle={"context"} my={"1rem"}>
+              {Parser(aboutContent.content)}
+            </Text>
           </Flex>
           <Flex
             w={{ base: "100%", xl: "30%" }}
