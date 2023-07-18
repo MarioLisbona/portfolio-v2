@@ -10,20 +10,18 @@ const Projects = () => {
     <Box id={"projects"} pt={"70px"} mt={"70px"}>
       <SectionContainer>
         <Header title="Projects" reverse />
-        <Flex w={"100%"} justify={"center"}>
-          <Wrap spacing="50px">
+        <Flex w={"100%"}>
+          <Wrap spacing={{ base: "20px", xl: "50px" }} justify={"center"}>
             {projectsData.map((proj, idx) => (
               <WrapItem key={idx}>
-                <Center>
-                  <ProjectCard
-                    thumbnail={proj.thumbnail}
-                    title={proj.title}
-                    tech={proj.tech}
-                    content={`${proj.content.substring(0, 150)}....`}
-                    repo={proj.repo}
-                    site={proj.site}
-                  />
-                </Center>
+                <ProjectCard
+                  thumbnail={proj.thumbnail}
+                  title={proj.title}
+                  tech={proj.tech}
+                  content={`${proj.content.substring(0, 150)}....`}
+                  repo={proj.repo}
+                  site={proj.site}
+                />
               </WrapItem>
             ))}
           </Wrap>
