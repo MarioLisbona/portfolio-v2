@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { ExperienceDataProps } from "../constants/ExperienceData";
 import TechBox from "./TechBox";
+import Parser from "html-react-parser";
 
 const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
   return (
@@ -34,14 +35,15 @@ const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
             </Text>
             <Text textStyle={"smBold"}>{exp.location}</Text>
           </Flex>
-
-          <Text textStyle={"context"} mb={"0.5rem"}>
-            <UnorderedList>
-              {exp.description.map((item, idx) => (
-                <ListItem key={idx}>{item}</ListItem>
-              ))}
-            </UnorderedList>
-          </Text>
+          <UnorderedList>
+            {exp.description.map((item, idx) => (
+              <ListItem key={idx}>
+                <Text textStyle={"context"} mb={"0.5rem"}>
+                  {Parser(item)}
+                </Text>
+              </ListItem>
+            ))}
+          </UnorderedList>
           <Flex>
             <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
               {exp.techStack.map((tech, idx) => (
