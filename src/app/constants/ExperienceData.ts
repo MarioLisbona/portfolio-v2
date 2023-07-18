@@ -3,7 +3,7 @@ export interface ExperienceDataProps {
   dates: string;
   title: string;
   location: string;
-  description: string;
+  description: string[];
   techStack: string[];
 }
 
@@ -13,48 +13,14 @@ export const experienceData: ExperienceDataProps[] = [
     dates: "May, 2023 - Present",
     title: "Junior Web Developer",
     location: "Sydney (Remote)",
-    description:
-      "I'm building the new marketing website and implementing content management systems. Building a raw media editing UI which allows users to create, delete, edit and export audio clips. Developing and writing automated test with Jest. Communicating and collaborating with my team remotely.",
-    techStack: [
-      "NextJS",
-      "TypeScript",
-      "ChakraUI",
-      "Git",
-      "Github",
-      "Zoom",
-      "Slack",
-      "Jira",
-      "Confluence",
-      "Figma",
+    description: [
+      "Developing the marketing website for https://editonthespot.com using Next.js with TypeScript and Chakra-UI",
+      "Implementing content management with Sanity.io",
+      "Applying version control using Git and Github",
+      "Building a raw media editing UI, using React, TypeScript and Chakra-UI, which allows app users to create, delete, edit and export audio clips",
+      "Writing and developing automated test scripts with Jest",
+      "Communicating and collaborating with my team using Zoom, Slack, Jira, Confluence and Figma",
     ],
-  },
-  {
-    company: "Edit on The Spot",
-    dates: "May, 2023 - Present",
-    title: "Junior Web Developer",
-    location: "Sydney (Remote)",
-    description:
-      "I'm building the new marketing website and implementing content management systems. Building a raw media editing UI which allows users to create, delete, edit and export audio clips. Developing and writing automated test with Jest. Communicating and collaborating with my team remotely.",
-    techStack: [
-      "NextJS",
-      "TypeScript",
-      "ChakraUI",
-      "Git",
-      "Github",
-      "Zoom",
-      "Slack",
-      "Jira",
-      "Confluence",
-      "Figma",
-    ],
-  },
-  {
-    company: "Edit on The Spot",
-    dates: "May, 2023 - Present",
-    title: "Junior Web Developer",
-    location: "Sydney (Remote)",
-    description:
-      "I'm building the new marketing website and implementing content management systems. Building a raw media editing UI which allows users to create, delete, edit and export audio clips. Developing and writing automated test with Jest. Communicating and collaborating with my team remotely.",
     techStack: [
       "NextJS",
       "TypeScript",
