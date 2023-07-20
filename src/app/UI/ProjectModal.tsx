@@ -9,6 +9,7 @@ import {
   Button,
   Text,
   Stack,
+  Flex,
   Card,
   CardBody,
   CardFooter,
@@ -16,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
+import Image from "next/image";
 const ProjectModal = ({
   isOpen,
   onClose,
@@ -34,8 +36,18 @@ const ProjectModal = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
       <CustomOverlay />
-      <ModalContent>
-        <ModalHeader>{project.title}</ModalHeader>
+      <ModalContent minWidth="fit-content">
+        <Card>
+          <CardBody padding={0}>
+            <Image
+              src={project.thumbnail}
+              height={500}
+              width={800}
+              alt={`Screenshot of ${project.title} project`}
+            />
+          </CardBody>
+        </Card>
+        {/* <ModalHeader>{project.title}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <Card
@@ -62,7 +74,7 @@ const ProjectModal = ({
             Close
           </Button>
           <Button variant="ghost">Secondary Action</Button>
-        </ModalFooter>
+        </ModalFooter> */}
       </ModalContent>
     </Modal>
   );
