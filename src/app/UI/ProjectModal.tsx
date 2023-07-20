@@ -8,18 +8,53 @@ import {
   ModalCloseButton,
   Button,
   Text,
+  Stack,
+  Card,
+  CardBody,
+  CardFooter,
   useDisclosure,
 } from "@chakra-ui/react";
-const ProjectModal = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+import Parser from "html-react-parser";
+import { ProjectDataProps } from "../constants/projectsData";
+const ProjectModal = ({
+  isOpen,
+  onClose,
+  project,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  project: ProjectDataProps;
+}) => {
+  const CustomOverlay = () => (
+    <ModalOverlay
+      bg="blackAlpha.300"
+      backdropFilter="blur(10px) hue-rotate(45deg)"
+    />
+  );
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
-      <ModalOverlay />
+    <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
+      <CustomOverlay />
       <ModalContent>
-        <ModalHeader>Modal Title</ModalHeader>
+        <ModalHeader>{project.title}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Text></Text>
+          <Card
+            direction={{ base: "column", sm: "row" }}
+            overflow="hidden"
+            variant="outline"
+          >
+            <Stack>
+              <CardBody>
+                <Text py="2">{Parser(project.content)}</Text>
+              </CardBody>
+
+              <CardFooter>
+                <Button variant="solid" colorScheme="blue">
+                  Buy Latte
+                </Button>
+              </CardFooter>
+            </Stack>
+          </Card>
         </ModalBody>
 
         <ModalFooter>
