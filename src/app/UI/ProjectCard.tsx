@@ -17,22 +17,9 @@ import { LuExternalLink } from "react-icons/lu";
 import SocialIcon from "./SocialIcon";
 import CustomIcon from "./CustomIcon";
 import Parser from "html-react-parser";
+import { ProjectDataProps } from "../constants/projectsData";
 
-const ProjectCard = ({
-  thumbnail,
-  title,
-  tech,
-  content,
-  repo,
-  site,
-}: {
-  thumbnail: string;
-  title: string;
-  tech: string;
-  content: string;
-  repo?: string;
-  site?: string;
-}) => {
+const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
   return (
     <Card
       maxW="lg"
@@ -42,18 +29,18 @@ const ProjectCard = ({
       <CardBody>
         <Flex justify="center">
           <Image
-            src={thumbnail}
+            src={project.thumbnail}
             height={300}
             width={600}
-            alt={`Screenshot of ${title} project`}
+            alt={`Screenshot of ${project.title} project`}
           />
         </Flex>
         <Stack mt="6" spacing="3">
           <Flex w={"100%"} align={"center"} justify={"space-between"}>
-            <Text textStyle={"extraSmallHeadingBold"}>{title}</Text>
+            <Text textStyle={"extraSmallHeadingBold"}>{project.title}</Text>
             <Flex>
-              {repo && (
-                <SocialIcon href={repo!}>
+              {project.repo && (
+                <SocialIcon href={project.repo!}>
                   <CustomIcon
                     color={"sage"}
                     icon={SiGithub}
@@ -62,8 +49,8 @@ const ProjectCard = ({
                   />
                 </SocialIcon>
               )}
-              {site && (
-                <SocialIcon href={site!}>
+              {project.site && (
+                <SocialIcon href={project.site!}>
                   <CustomIcon
                     color={"sage"}
                     icon={LuExternalLink}
@@ -76,10 +63,12 @@ const ProjectCard = ({
           </Flex>
           <Flex w={"100%"} justify={"flex-start"}>
             <Text textStyle={"smBold"} color={"tan"}>
-              {tech}
+              {project.tech}
             </Text>
           </Flex>
-          <Text textStyle={"context"}>{Parser(content)}</Text>
+          <Text textStyle={"context"}>
+            {Parser(`${project.content.substring(0, 100)}...`)}
+          </Text>
           <Text color="tan" fontSize="2xl">
             Learn More
           </Text>
