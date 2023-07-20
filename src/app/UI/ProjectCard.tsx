@@ -18,6 +18,9 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  CardHeader,
+  CardFooter,
+  Heading,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { SiGithub } from "react-icons/si";
@@ -93,14 +96,29 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
           </Stack>
         </CardBody>
       </Card>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
         <CustomOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>{project.title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text textStyle={"heading"}>{project.title}</Text>
-            <Text textStyle={"context"}>{project.content}</Text>
+            <Card
+              direction={{ base: "column", sm: "row" }}
+              overflow="hidden"
+              variant="outline"
+            >
+              <Stack>
+                <CardBody>
+                  <Text py="2">{Parser(project.content)}</Text>
+                </CardBody>
+
+                <CardFooter>
+                  <Button variant="solid" colorScheme="blue">
+                    Buy Latte
+                  </Button>
+                </CardFooter>
+              </Stack>
+            </Card>
           </ModalBody>
 
           <ModalFooter>
