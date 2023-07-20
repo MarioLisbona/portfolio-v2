@@ -42,14 +42,16 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
           boxShadow={"xl"}
           borderRadius={"1rem"}
         >
-          <CardBody paddingBottom={0}>
-            <Image
-              src={project.thumbnail}
-              height={300}
-              width={600}
-              alt={`Screenshot of ${project.title} project`}
-            />
-          </CardBody>
+          <Link onClick={onOpen}>
+            <CardBody paddingBottom={0}>
+              <Image
+                src={project.thumbnail}
+                height={300}
+                width={600}
+                alt={`Screenshot of ${project.title} project`}
+              />
+            </CardBody>
+          </Link>
         </Card>
         <Card
           variant={"unstyled"}
@@ -76,7 +78,6 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
                       <CustomIcon
                         color={"sage"}
                         icon={LuExternalLink}
-                        // me={"1rem"}
                         label={"Project Live Site"}
                       />
                     </SocialIcon>
