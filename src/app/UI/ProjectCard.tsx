@@ -29,6 +29,12 @@ import { ProjectDataProps } from "../constants/projectsData";
 
 const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const CustomOverlay = () => (
+    <ModalOverlay
+      bg="blackAlpha.300"
+      backdropFilter="blur(10px) hue-rotate(45deg)"
+    />
+  );
   return (
     <>
       <Card
@@ -88,7 +94,7 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
         </CardBody>
       </Card>
       <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
+        <CustomOverlay />
         <ModalContent>
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
