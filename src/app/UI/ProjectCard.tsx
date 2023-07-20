@@ -35,64 +35,73 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Card
-        maxW="lg"
-        bg={useColorModeValue("ivory", "whiteAlpha.50")}
-        boxShadow={"xl"}
-      >
-        <CardBody>
-          <Flex justify="center">
+      <Flex direction={"column"}>
+        <Card
+          maxW="lg"
+          bg={useColorModeValue("ivory", "whiteAlpha.50")}
+          boxShadow={"xl"}
+          borderRadius={"1rem"}
+        >
+          <CardBody paddingBottom={0}>
             <Image
               src={project.thumbnail}
               height={300}
               width={600}
               alt={`Screenshot of ${project.title} project`}
             />
-          </Flex>
-          <Stack mt="6" spacing="3">
-            <Flex w={"100%"} align={"center"} justify={"space-between"}>
-              <Text textStyle={"extraSmallHeadingBold"}>{project.title}</Text>
-              <Flex>
-                {project.repo && (
-                  <SocialIcon href={project.repo!}>
-                    <CustomIcon
-                      color={"sage"}
-                      icon={SiGithub}
-                      me={"1rem"}
-                      label={"Project Github"}
-                    />
-                  </SocialIcon>
-                )}
-                {project.site && (
-                  <SocialIcon href={project.site!}>
-                    <CustomIcon
-                      color={"sage"}
-                      icon={LuExternalLink}
-                      me={"1rem"}
-                      label={"Project Live Site"}
-                    />
-                  </SocialIcon>
-                )}
+          </CardBody>
+        </Card>
+        <Card
+          variant={"unstyled"}
+          maxW="lg"
+          bg={useColorModeValue("white", "gray.900")}
+        >
+          <CardBody>
+            <Stack mt="6" spacing="3">
+              <Flex w={"100%"} align={"center"} justify={"space-between"}>
+                <Text textStyle={"extraSmallHeadingBold"}>{project.title}</Text>
+                <Flex>
+                  {project.repo && (
+                    <SocialIcon href={project.repo!}>
+                      <CustomIcon
+                        color={"sage"}
+                        icon={SiGithub}
+                        me={project.site ? "1rem" : "0rem"}
+                        label={"Project Github"}
+                      />
+                    </SocialIcon>
+                  )}
+                  {project.site && (
+                    <SocialIcon href={project.site!}>
+                      <CustomIcon
+                        color={"sage"}
+                        icon={LuExternalLink}
+                        // me={"1rem"}
+                        label={"Project Live Site"}
+                      />
+                    </SocialIcon>
+                  )}
+                </Flex>
               </Flex>
-            </Flex>
-            <Flex w={"100%"} justify={"flex-start"}>
-              <Text textStyle={"smBold"} color={"tan"}>
-                {project.tech}
-              </Text>
-            </Flex>
-            <Text textStyle={"context"}>
-              {Parser(`${project.content.substring(0, 100)}...`)}
-            </Text>
-            <Flex justify={"flex-start"}>
-              <Button variant={"linkBtn"} onClick={onOpen}>
-                <Text color="tan" fontSize="2xl">
-                  Learn More
+              <Flex w={"100%"} justify={"flex-start"}>
+                <Text textStyle={"smBold"} color={"tan"}>
+                  {project.tech}
                 </Text>
-              </Button>
-            </Flex>
-          </Stack>
-        </CardBody>
-      </Card>
+              </Flex>
+              <Text textStyle={"context"}>
+                {Parser(`${project.content.substring(0, 100)}...`)}
+              </Text>
+              <Flex justify={"flex-start"}>
+                <Button variant={"linkBtn"} onClick={onOpen}>
+                  <Text color="tan" fontSize="2xl">
+                    Learn More
+                  </Text>
+                </Button>
+              </Flex>
+            </Stack>
+          </CardBody>
+        </Card>
+      </Flex>
       <ProjectModal isOpen={isOpen} onClose={onClose} project={project} />
     </>
   );
