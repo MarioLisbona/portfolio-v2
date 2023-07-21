@@ -17,8 +17,8 @@ export const projectsData: ProjectDataProps[] = [
       "A User interface to create, delete and edit media clips timings on a waveform window",
     content:
       "I built this waveform editor using React and a third party library called Peaks.js. Styling was achieved using Chakra UI.<br><br>The waveform editor displays an audio clip in two waveforms, an overview of the entire media and a zoom view of a selected section of the media.The waveform is presented either pre-populated with clips/segments or displayed with no clips/segments.<br><br> A user can add more clips/segments to the timeline whether it is pre-populated or empty. All clips can be edited, deleted or created once the user is ready and the clip information is dynamically displayed in a list below the waveform.<br><br>A variety of error checking logic has been implemented including non-zero length clips, clips no being able to overlap and clips requiring a filename before being able to be created.",
-    repo: "https://github.com/MarioLisbona/CA-T3A2-B-travelers-forum-client",
-    site: "https://travellersforum.netlify.app/",
+    repo: "#",
+    site: "#",
   },
   {
     thumbnail: "/images/travellers-forum-front-end.png",

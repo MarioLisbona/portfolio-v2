@@ -53,32 +53,35 @@ const ProjectModal = ({
         <Flex
           direction={"column"}
           align={"flex-start"}
-          bg={"coolGray"}
+          bg={"blackAlpha.800"}
           p={"2rem"}
           maxW={"900px"}
         >
-          <Text color={"white"} textStyle={"heading"} mb={"1rem"}>
+          <Text color={"white"} textStyle={"extraSmallHeadingBold"} mb={"1rem"}>
             {project.title}
           </Text>
-          <Text color={"white"} textStyle={"smBold"} mb={"1rem"}>
+          <Text color={"tan"} textStyle={"smBold"} mb={"1rem"}>
             {project.tech}
           </Text>
           <Text color={"white"} textStyle={"context"} mb={"1rem"}>
             {Parser(project.content)}
           </Text>
-          <Text mb={"1rem"}>Project Links</Text>
+          <Text textStyle={"smBold"} mb={"1rem"} color={"tan"}>
+            Project Links
+          </Text>
           <Flex>
             <Flex me={"1rem"} align={"center"}>
               {project.repo && (
                 <Link href={project.repo!}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
-                      color={"black"}
+                      small
+                      color={"white"}
                       icon={SiGithub}
                       me={"0.5rem"}
                       label={"Project Github"}
                     />
-                    <Text color={"black"} textStyle={"smBold"}>
+                    <Text color={"white"} textStyle={"smBold"}>
                       source code
                     </Text>
                   </Button>
@@ -90,12 +93,13 @@ const ProjectModal = ({
                 <Link href={project.site!}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
-                      color={"black"}
+                      small
+                      color={"white"}
                       icon={LuExternalLink}
                       me={"0.5rem"}
                       label={"Project Live Site"}
                     />
-                    <Text color={"black"} textStyle={"smBold"}>
+                    <Text color={"white"} textStyle={"smBold"}>
                       Live Site
                     </Text>
                   </Button>
