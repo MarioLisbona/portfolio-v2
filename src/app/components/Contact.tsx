@@ -13,8 +13,7 @@ const Contact = () => {
         <CenterHeader title={"Contact"} />
         <Flex
           w={"100%"}
-          px={"5rem"}
-          // py={"6rem"}
+          px={{ base: "1rem", md: "5rem" }}
           direction={"column"}
           align={"center"}
         >
