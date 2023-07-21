@@ -8,19 +8,21 @@ const CustomIcon = ({
   ms,
   me,
   label,
+  small,
 }: {
   icon: IconType;
   color?: string;
   ms?: string;
   me?: string;
   label?: string;
+  small?: boolean;
 }) => {
   return (
     <Icon
       color={color}
       as={icon}
-      h={{ base: "22px", lg: "32px" }}
-      w={{ base: "22px", lg: "32px" }}
+      h={small ? { base: "1px", lg: "16px" } : { base: "22px", lg: "32px" }}
+      w={small ? { base: "1px", lg: "16px" } : { base: "22px", lg: "32px" }}
       me={me}
       ms={ms}
       aria-label={label}
