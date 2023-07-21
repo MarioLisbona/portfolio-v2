@@ -91,7 +91,7 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
               <Text textStyle={"context"}>{project.intro}</Text>
               <Flex justify={"flex-start"}>
                 <Button variant={"linkBtn"} onClick={onOpen}>
-                  <Text textStyle={"contextBold"} color="tan">
+                  <Text textStyle={"extraSmallHeadingBold"} color="tan">
                     Learn More
                   </Text>
                 </Button>
