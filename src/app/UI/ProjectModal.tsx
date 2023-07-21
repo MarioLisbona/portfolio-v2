@@ -59,7 +59,7 @@ const ProjectModal = ({
             {project.tech}
           </Text>
           <Text color={"white"} textStyle={"context"}>
-            {project.content}
+            {Parser(project.content)}
           </Text>
           <Text>Project Links</Text>
           <Flex>
