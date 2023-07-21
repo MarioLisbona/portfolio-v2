@@ -37,7 +37,7 @@ const theme = extendTheme({
     },
     extraSmallHeadingBold: {
       fontFamily: "headingBold",
-      fontSize: ["12px", "16px", "22px"],
+      fontSize: ["16px", "16px", "22px"],
       lineHeight: "135%",
     },
     context: {
@@ -56,7 +56,7 @@ const theme = extendTheme({
     },
     smBold: {
       fontFamily: "Montserrat",
-      fontSize: ["18px"],
+      fontSize: ["12px", "18px"],
       fontWeight: "600",
       lineHeight: "125%",
     },
