@@ -88,9 +88,7 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
                   {project.tech}
                 </Text>
               </Flex>
-              <Text textStyle={"context"}>
-                {Parser(`${project.content.substring(0, 75)}...`)}
-              </Text>
+              <Text textStyle={"context"}>{project.intro}</Text>
               <Flex justify={"flex-start"}>
                 <Button variant={"linkBtn"} onClick={onOpen}>
                   <Text textStyle={"contextBold"} color="tan">
