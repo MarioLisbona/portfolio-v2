@@ -14,10 +14,11 @@ import {
   CardBody,
   CardFooter,
   useDisclosure,
+  Image,
 } from "@chakra-ui/react";
 import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
-import Image from "next/image";
+// import Image from "next/image";
 const ProjectModal = ({
   isOpen,
   onClose,
@@ -36,45 +37,13 @@ const ProjectModal = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
       <CustomOverlay />
-      <ModalContent minWidth="fit-content">
-        <Card>
-          <CardBody padding={0}>
-            <Image
-              src={project.thumbnail}
-              height={500}
-              width={800}
-              alt={`Screenshot of ${project.title} project`}
-            />
-          </CardBody>
-        </Card>
-        {/* <ModalHeader>{project.title}</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>
-          <Card
-            direction={{ base: "column", sm: "row" }}
-            overflow="hidden"
-            variant="outline"
-          >
-            <Stack>
-              <CardBody>
-                <Text py="2">{Parser(project.content)}</Text>
-              </CardBody>
-
-              <CardFooter>
-                <Button variant="solid" colorScheme="blue">
-                  Buy Latte
-                </Button>
-              </CardFooter>
-            </Stack>
-          </Card>
-        </ModalBody>
-
-        <ModalFooter>
-          <Button colorScheme="blue" mr={3} onClick={onClose}>
-            Close
-          </Button>
-          <Button variant="ghost">Secondary Action</Button>
-        </ModalFooter> */}
+      <ModalContent borderRadius={"1rem"} minWidth="fit-content">
+        <Image
+          borderRadius={"1rem"}
+          src={project.thumbnail}
+          width={900}
+          alt={`Screenshot of ${project.title} project`}
+        />
       </ModalContent>
     </Modal>
   );
