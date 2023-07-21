@@ -25,7 +25,11 @@ import Parser from "html-react-parser";
 
 const About = () => {
   return (
-    <Box id={"about"} pt={"70px"} mt={"-70px"}>
+    <Box
+      id={"about"}
+      pt={{ base: "30px", md: "70px" }}
+      mt={{ base: "-30px", md: "-70px" }}
+    >
       <SectionContainer>
         <Header title={"About"} />
         <Flex
@@ -34,11 +38,6 @@ const About = () => {
           justify={"space-between"}
         >
           <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
-            {/* {aboutContent.map((item, idx) => (
-              <Text key={idx} textStyle={"context"} my={"1rem"}>
-                {item.para}
-              </Text>
-            ))} */}
             <Text textStyle={"context"} my={"1rem"}>
               {Parser(aboutContent.content)}
             </Text>
