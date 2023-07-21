@@ -15,7 +15,7 @@ const CustomIcon = ({
   ms?: string;
   me?: string;
   label?: string;
-  small?: string;
+  small?: boolean;
 }) => {
   return (
     <Icon
