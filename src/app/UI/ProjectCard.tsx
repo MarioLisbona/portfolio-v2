@@ -21,8 +21,8 @@ import {
   CardHeader,
   CardFooter,
   Heading,
+  Image,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
 import SocialIcon from "./SocialIcon";
@@ -46,7 +46,6 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
             <CardBody paddingBottom={0}>
               <Image
                 src={project.thumbnail}
-                height={300}
                 width={600}
                 alt={`Screenshot of ${project.title} project`}
               />
