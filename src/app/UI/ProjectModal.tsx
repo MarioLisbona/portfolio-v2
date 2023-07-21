@@ -15,6 +15,7 @@ import {
   CardFooter,
   useDisclosure,
   Image,
+  Icon,
 } from "@chakra-ui/react";
 import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
@@ -39,11 +40,43 @@ const ProjectModal = ({
       <CustomOverlay />
       <ModalContent borderRadius={"1rem"} minWidth="fit-content">
         <Image
-          borderRadius={"1rem"}
+          borderTopRadius={"1rem"}
           src={project.thumbnail}
           width={900}
           alt={`Screenshot of ${project.title} project`}
         />
+        <Flex
+          direction={"column"}
+          align={"flex-start"}
+          bg={"coolGray"}
+          p={"2rem"}
+          maxW={"900px"}
+        >
+          <Text color={"white"} textStyle={"heading"}>
+            {project.title}
+          </Text>
+          <Text color={"white"} textStyle={"smBold"}>
+            {project.tech}
+          </Text>
+          <Text color={"white"} textStyle={"context"}>
+            {project.content}
+          </Text>
+          <Text>Project Links</Text>
+          <Flex>
+            <Flex>
+              <Icon />
+              <Text color={"white"} textStyle={"smBold"}>
+                source code
+              </Text>
+            </Flex>
+            <Flex>
+              <Icon />
+              <Text color={"white"} textStyle={"smBold"}>
+                live site
+              </Text>
+            </Flex>
+          </Flex>
+        </Flex>
       </ModalContent>
     </Modal>
   );
