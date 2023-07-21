@@ -22,7 +22,7 @@ export const projectsData: ProjectDataProps[] = [
     title: "Traveller's Forum",
     tech: "MongoDB-Express-React-NodeJs",
     content:
-      "This project was built with a partner for our final assessment at <a href='https://coderacademy.edu.au/'>Coder Academy.</a> I developed the client in React.<br><br>We used the MERN stack and various third party libraries to implement CRUD functionality and authentication.<br><br>Traveller's Forum allows guests to browse all stories posted on the forum. Users can register to become a member and post stories to different categories, delete and edit their own stories and rate stories posted by other users.",
+      "This project was built, in partnership with another student, for our final assessment at <a href='https://coderacademy.edu.au/'>Coder Academy.</a><br><br>I developed the client in React.<br><br>We used the MERN stack and various third party libraries to implement CRUD functionality and authentication.<br><br>Traveller's Forum allows guests to browse all stories posted on the forum. Users can register to become a member and post stories to different categories, delete and edit their own stories and rate stories posted by other users.",
     repo: "https://github.com/MarioLisbona/CA-T3A2-B-travelers-forum-client",
     site: "https://travellersforum.netlify.app/",
   },
@@ -31,7 +31,7 @@ export const projectsData: ProjectDataProps[] = [
     title: "Forum",
     tech: "Python-Flask-Postgres",
     content:
-      "I designed this API web server that was developed with Python, Flask and PostgreSQL. It gives the users access to full CRUD operations on the data stored in the database.<br><br>Users are authenticated with JWT tokens after they have successfully registered to the platform. Registered users can make posts to a variety of channels in the forum, reply to posts and delete their own posts and replies.<br><br>Users with administration rights can delete any post or reply, issue warnings to users and delete users from the forum. There is also an endpoint to display forum statistics.",
+      "I designed this API web server that was developed with Python, Flask and PostgreSQL.<br><br>It gives the users access to full CRUD operations on the data stored in the database.<br><br>Users are authenticated with JWT tokens after they have successfully registered to the platform. Registered users can make posts to a variety of channels in the forum, reply to posts and delete their own posts and replies.<br><br>Users with administration rights can delete any post or reply, issue warnings to users and delete users from the forum. There is also an endpoint to display forum statistics.",
     repo: "https://github.com/MarioLisbona/CA-T2A2-API-Webserver",
   },
   {
@@ -39,7 +39,7 @@ export const projectsData: ProjectDataProps[] = [
     title: "Contacts App",
     tech: "Python-bash",
     content:
-      "I built this contacts book Terminal Application in Python.<br><br>I used the Rich Python library to create the interface and used TinyDB, a document-orientated database library to allow for persistent storage and retrieval of data entered into the application.",
+      "I built this contacts book Terminal Application in Python. I used the Rich Python library to create the interface and used TinyDB, a document-orientated database library to allow for persistent storage and retrieval of data entered into the application.",
     repo: "https://github.com/MarioLisbona/CA-T1A3-terminal-app",
   },
   {

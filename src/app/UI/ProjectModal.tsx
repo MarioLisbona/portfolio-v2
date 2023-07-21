@@ -16,9 +16,14 @@ import {
   useDisclosure,
   Image,
   Icon,
+  Link,
 } from "@chakra-ui/react";
+import { SiGithub } from "react-icons/si";
+import { LuExternalLink } from "react-icons/lu";
 import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
+import CustomIcon from "./CustomIcon";
+import SocialIcon from "./SocialIcon";
 // import Image from "next/image";
 const ProjectModal = ({
   isOpen,
@@ -52,28 +57,50 @@ const ProjectModal = ({
           p={"2rem"}
           maxW={"900px"}
         >
-          <Text color={"white"} textStyle={"heading"}>
+          <Text color={"white"} textStyle={"heading"} mb={"1rem"}>
             {project.title}
           </Text>
-          <Text color={"white"} textStyle={"smBold"}>
+          <Text color={"white"} textStyle={"smBold"} mb={"1rem"}>
             {project.tech}
           </Text>
-          <Text color={"white"} textStyle={"context"}>
+          <Text color={"white"} textStyle={"context"} mb={"1rem"}>
             {Parser(project.content)}
           </Text>
-          <Text>Project Links</Text>
+          <Text mb={"1rem"}>Project Links</Text>
           <Flex>
-            <Flex>
-              <Icon />
-              <Text color={"white"} textStyle={"smBold"}>
-                source code
-              </Text>
+            <Flex me={"1rem"} align={"center"}>
+              {project.repo && (
+                <Link href={project.repo!}>
+                  <Button variant={"linkBtn"}>
+                    <CustomIcon
+                      color={"black"}
+                      icon={SiGithub}
+                      me={"0.5rem"}
+                      label={"Project Github"}
+                    />
+                    <Text color={"black"} textStyle={"smBold"}>
+                      source code
+                    </Text>
+                  </Button>
+                </Link>
+              )}
             </Flex>
-            <Flex>
-              <Icon />
-              <Text color={"white"} textStyle={"smBold"}>
-                live site
-              </Text>
+            <Flex align={"center"}>
+              {project.site && (
+                <Link href={project.site!}>
+                  <Button variant={"linkBtn"}>
+                    <CustomIcon
+                      color={"black"}
+                      icon={LuExternalLink}
+                      me={"0.5rem"}
+                      label={"Project Live Site"}
+                    />
+                    <Text color={"black"} textStyle={"smBold"}>
+                      Live Site
+                    </Text>
+                  </Button>
+                </Link>
+              )}
             </Flex>
           </Flex>
         </Flex>
