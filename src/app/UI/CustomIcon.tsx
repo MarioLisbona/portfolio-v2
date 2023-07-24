@@ -23,7 +23,7 @@ const CustomIcon = ({
       as={icon}
       h={small ? { base: "11px", lg: "16px" } : { base: "22px", lg: "32px" }}
       w={small ? { base: "11px", lg: "16px" } : { base: "22px", lg: "32px" }}
-      me={me}
+      me={me ? me : { base: "0.5rem", lg: "1rem" }}
       ms={ms}
       aria-label={label}
     ></Icon>
