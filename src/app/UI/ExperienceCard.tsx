@@ -27,13 +27,17 @@ const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
         <CardBody>
           <Flex w={"100%"} justify={"space-between"} mb={"0.5rem"}>
             <Text textStyle={"extraSmallHeadingBold"}>{exp.company}</Text>
-            <Text textStyle={"extraSmallHeadingBold"}>{exp.dates}</Text>
+            <Text textStyle={"extraSmallHeadingBold"} textAlign={"right"}>
+              {exp.dates}
+            </Text>
           </Flex>
           <Flex w={"100%"} justify={"space-between"} mb={"0.5rem"}>
             <Text color={"tan"} textStyle={"extraSmallHeadingBold"}>
               {exp.title}
             </Text>
-            <Text textStyle={"extraSmallHeadingBold"}>{exp.location}</Text>
+            <Text textStyle={"extraSmallHeadingBold"} textAlign={"right"}>
+              {exp.location}
+            </Text>
           </Flex>
           <UnorderedList>
             {exp.description.map((item, idx) => (
