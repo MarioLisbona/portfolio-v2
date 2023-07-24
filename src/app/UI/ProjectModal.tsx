@@ -24,6 +24,7 @@ import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
 import CustomIcon from "./CustomIcon";
 import SocialIcon from "./SocialIcon";
+import FullStopIcon from "./FullStopIcon";
 // import Image from "next/image";
 const ProjectModal = ({
   isOpen,
@@ -66,8 +67,9 @@ const ProjectModal = ({
           <Text color={"white"} textStyle={"context"} mb={"1rem"}>
             {Parser(project.content)}
           </Text>
-          <Text textStyle={"smBold"} mb={"1rem"} color={"tan"}>
+          <Text color={"white"} textStyle={"extraSmallHeadingBold"} mb={"1rem"}>
             Project Links
+            <FullStopIcon header modal />
           </Text>
           <Flex>
             <Flex me={"1rem"} align={"center"}>
