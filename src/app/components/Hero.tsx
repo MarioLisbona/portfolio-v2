@@ -12,6 +12,7 @@ import {
 import SectionContainer from "./SectionContainer";
 import { FaCircle } from "react-icons/fa";
 import { handleLinkClick } from "../lib/utils";
+import FullStopIcon from "../UI/FullStopIcon";
 
 export default function Hero() {
   return (
@@ -29,6 +30,7 @@ export default function Hero() {
         >
           <Text p={"0"} textStyle={"headingBold"}>
             Hi, I&#39;m Mario
+            <FullStopIcon header />
           </Text>
 
           <Text textStyle={"subheadingBold"}>
