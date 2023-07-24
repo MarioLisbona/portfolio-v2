@@ -17,14 +17,10 @@ import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
 export default function Footer() {
   return (
     <Flex
-      px={"1rem"}
+      px={{ base: ".25rem", lg: "1rem" }}
       justify={"space-between"}
       align={"center"}
       bg={useColorModeValue("white", "gray.900")}
-      // position="fixed"
-      // bottom={0}
-      // left={0}
-      // right={0}
       zIndex={999}
       borderTopColor={useColorModeValue("black", "whiteAlpha.300")}
       boxShadow="dark-lg"

@@ -21,8 +21,8 @@ const CustomIcon = ({
     <Icon
       color={color}
       as={icon}
-      h={small ? { base: "1px", lg: "16px" } : { base: "22px", lg: "32px" }}
-      w={small ? { base: "1px", lg: "16px" } : { base: "22px", lg: "32px" }}
+      h={small ? { base: "11px", lg: "16px" } : { base: "22px", lg: "32px" }}
+      w={small ? { base: "11px", lg: "16px" } : { base: "22px", lg: "32px" }}
       me={me}
       ms={ms}
       aria-label={label}
