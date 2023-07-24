@@ -67,12 +67,11 @@ const About = () => {
           <Text textStyle={"smallHeadingBold"} me={"1rem"}>
             My Links
           </Text>
-          <CustomIcon color={"coolGray"} icon={PiArrowRightBold} me={"1rem"} />
+          <CustomIcon color={"coolGray"} icon={PiArrowRightBold} />
           <SocialIcon href={"https://www.linkedin.com/in/mariolisbona/"}>
             <CustomIcon
               color={"sage"}
               icon={SiLinkedin}
-              me={"1rem"}
               label={"My LinkedIn Profile"}
             />
           </SocialIcon>
@@ -80,7 +79,6 @@ const About = () => {
             <CustomIcon
               color={"sage"}
               icon={SiGithub}
-              me={"1rem"}
               label={"My Github Profile"}
             />
           </SocialIcon>
@@ -88,7 +86,6 @@ const About = () => {
             <CustomIcon
               color={"sage"}
               icon={SiInstagram}
-              me={"1rem"}
               label={"My Instagram Profile"}
             />
           </SocialIcon>

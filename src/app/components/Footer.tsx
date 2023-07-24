@@ -31,7 +31,6 @@ export default function Footer() {
           <CustomIcon
             color={useColorModeValue("black", "white")}
             icon={SiLinkedin}
-            me={"1rem"}
             label={"My LinkedIn Profile"}
           />
         </SocialIcon>
@@ -39,7 +38,6 @@ export default function Footer() {
           <CustomIcon
             color={useColorModeValue("black", "white")}
             icon={SiGithub}
-            me={"1rem"}
             label={"My Github Profile"}
           />
         </SocialIcon>
@@ -47,7 +45,6 @@ export default function Footer() {
           <CustomIcon
             color={useColorModeValue("black", "white")}
             icon={SiInstagram}
-            me={"1rem"}
             label={"My Instagram Profile"}
           />
         </SocialIcon>
