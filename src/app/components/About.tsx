@@ -1,17 +1,6 @@
 "use client";
-import {
-  Flex,
-  Text,
-  Icon,
-  Wrap,
-  WrapItem,
-  Button,
-  Link,
-  Box,
-} from "@chakra-ui/react";
+import { Flex, Text, Wrap, WrapItem, Box } from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
-import FullStopIcon from "../UI/FullStopIcon";
-import HorizontalLine from "../UI/HorizontalLine";
 import { BsTerminalFill } from "react-icons/bs";
 import { PiArrowRightBold } from "react-icons/pi";
 import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
@@ -21,7 +10,6 @@ import { aboutContent } from "../constants/aboutContent";
 import Header from "../UI/Header";
 import CustomIcon from "../UI/CustomIcon";
 import SocialIcon from "../UI/SocialIcon";
-import Parser from "html-react-parser";
 import { Reveal } from "../UI/Reveal";
 
 const About = () => {
