@@ -11,9 +11,7 @@ const Contact = () => {
   return (
     <Box id={"contact"} pt={"70px"} mt={"-70px"}>
       <SectionContainer>
-        <Reveal>
-          <CenterHeader title={"Contact"} />
-        </Reveal>
+        <CenterHeader title={"Contact"} />
         <Flex
           w={"100%"}
           px={{ base: "1rem", md: "5rem" }}

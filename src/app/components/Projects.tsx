@@ -10,9 +10,7 @@ const Projects = () => {
   return (
     <Box id={"projects"} pt={"70px"} mt={"-70px"}>
       <SectionContainer>
-        <Reveal>
-          <Header title="Projects" reverse />
-        </Reveal>
+        <Header title="Projects" reverse />
         <Flex w={"100%"}>
           <Wrap spacing={{ base: "20px", xl: "50px" }} justify={"center"}>
             {projectsData.map((project, idx) => (

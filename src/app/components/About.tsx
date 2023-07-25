@@ -32,9 +32,7 @@ const About = () => {
       mt={{ base: "-30px", md: "-70px" }}
     >
       <SectionContainer>
-        <Reveal>
-          <Header title={"About"} />
-        </Reveal>
+        <Header title={"About"} />
         <Flex
           w={"100%"}
           direction={{ base: "column", xl: "row" }}

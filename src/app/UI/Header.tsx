@@ -1,6 +1,7 @@
 import { Flex, Text } from "@chakra-ui/react";
 import FullStopIcon from "./FullStopIcon";
 import HorizontalLine from "./HorizontalLine";
+import { Reveal } from "./Reveal";
 
 const Header = ({ title, reverse }: { title: string; reverse?: boolean }) => {
   return (
@@ -11,8 +12,12 @@ const Header = ({ title, reverse }: { title: string; reverse?: boolean }) => {
       direction={reverse ? "row-reverse" : "row"}
     >
       <Flex align={"flex-end"} my={"1rem"}>
-        <Text textStyle={"subheadingBold"}>{title}</Text>
-        <FullStopIcon />
+        <Reveal>
+          <Text textStyle={"subheadingBold"}>{title}</Text>
+        </Reveal>
+        <Reveal>
+          <FullStopIcon />
+        </Reveal>
       </Flex>
       <HorizontalLine />
     </Flex>
