@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { SiZincsearch } from "react-icons/si";
+import { Box } from "@chakra-ui/react";
 
 interface Props {
   children: JSX.Element;
@@ -21,7 +22,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
     }
   }, [isInView]);
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <Box ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
@@ -51,6 +52,6 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
           zIndex: 20,
         }}
       /> */}
-    </div>
+    </Box>
   );
 };
