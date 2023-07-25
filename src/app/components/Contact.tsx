@@ -1,8 +1,7 @@
 import React from "react";
 import SectionContainer from "./SectionContainer";
-import Header from "../UI/Header";
 import CenterHeader from "../UI/CenterHeader";
-import { Box, Button, Flex, Icon, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 import CustomIcon from "../UI/CustomIcon";
 import { Reveal } from "../UI/Reveal";

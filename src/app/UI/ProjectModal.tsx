@@ -2,20 +2,10 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
   Button,
   Text,
-  Stack,
   Flex,
-  Card,
-  CardBody,
-  CardFooter,
-  useDisclosure,
   Image,
-  Icon,
   Link,
 } from "@chakra-ui/react";
 import { SiGithub } from "react-icons/si";
@@ -23,9 +13,7 @@ import { LuExternalLink } from "react-icons/lu";
 import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
 import CustomIcon from "./CustomIcon";
-import SocialIcon from "./SocialIcon";
 import FullStopIcon from "./FullStopIcon";
-// import Image from "next/image";
 const ProjectModal = ({
   isOpen,
   onClose,

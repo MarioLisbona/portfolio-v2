@@ -1,10 +1,9 @@
 import React from "react";
 import Header from "../UI/Header";
-import { Wrap, Flex, WrapItem, Center, Box } from "@chakra-ui/react";
+import { Wrap, Flex, WrapItem, Box } from "@chakra-ui/react";
 import ProjectCard from "../UI/ProjectCard";
 import SectionContainer from "./SectionContainer";
 import { projectsData } from "../constants/projectsData";
-import { Reveal } from "../UI/Reveal";
 
 const Projects = () => {
   return (
