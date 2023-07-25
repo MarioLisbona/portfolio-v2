@@ -4,8 +4,6 @@ import {
   Stack,
   CardBody,
   Wrap,
-  CardFooter,
-  Button,
   Text,
   useColorModeValue,
   UnorderedList,
