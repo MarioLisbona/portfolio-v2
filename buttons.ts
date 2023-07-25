@@ -70,7 +70,6 @@ const linkBtn = defineStyle({
   _hover: {
     transform: "translateY(2px)",
     transition: "all 0.3s ease 0s",
-    color: "coolGray",
   },
 });
 
