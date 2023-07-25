@@ -4,7 +4,6 @@ import Header from "../UI/Header";
 import { Flex, Box } from "@chakra-ui/react";
 import ExperienceCard from "../UI/ExperienceCard";
 import { experienceData } from "../constants/ExperienceData";
-import { Reveal } from "../UI/Reveal";
 
 const Experience = () => {
   return (
