@@ -1,15 +1,5 @@
 "use client";
-import {
-  Box,
-  Container,
-  Stack,
-  Text,
-  Link,
-  useColorModeValue,
-  Icon,
-  Flex,
-} from "@chakra-ui/react";
-
+import { Text, useColorModeValue, Flex } from "@chakra-ui/react";
 import SocialIcon from "../UI/SocialIcon";
 import CustomIcon from "../UI/CustomIcon";
 import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
