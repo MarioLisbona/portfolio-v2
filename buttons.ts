@@ -26,6 +26,7 @@ const filledSqBtn = defineStyle({
   _hover: {
     transform: "translateY(2px)",
     transition: "transform 0.2s ease",
+    textDecoration: "none",
   },
   borderRadius: "5px",
 });

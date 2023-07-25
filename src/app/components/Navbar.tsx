@@ -79,13 +79,15 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Button
-              display={{ base: "none", md: "block" }}
-              variant={"filledSqBtn"}
-              me={"1rem"}
-            >
-              My Resume
-            </Button>
+            <Link href={"#"}>
+              <Button
+                display={{ base: "none", md: "inline-block" }}
+                variant={"filledSqBtn"}
+                me={"1rem"}
+              >
+                My Resume
+              </Button>
+            </Link>
             <Button onClick={toggleColorMode} variant={"filledSqBtn"}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
@@ -112,6 +114,13 @@ export default function Navbar() {
                   <Button variant={"linkSmallBtn"}>{link.label}</Button>
                 </Link>
               ))}
+              <Flex>
+                <Link href={"#"}>
+                  <Button variant={"filledSqBtn"} me={"1rem"}>
+                    My Resume
+                  </Button>
+                </Link>
+              </Flex>
             </Stack>
           </Box>
         ) : null}
