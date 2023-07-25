@@ -34,24 +34,24 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
       >
         {children}
       </motion.div>
-      {/* <motion.div
+      <motion.div
         variants={{
           hidden: { left: 0 },
           visible: { left: "100%" },
         }}
         initial="hidden"
         animate={slideControls}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5, ease: "easeIn" }}
         style={{
           position: "absolute",
           top: 4,
           bottom: 4,
           left: 0,
           right: 0,
-          backgroundColor: "sage",
+          backgroundColor: "#686A4E",
           zIndex: 20,
         }}
-      /> */}
+      />
     </Box>
   );
 };
