@@ -4,6 +4,7 @@ import { Wrap, Flex, WrapItem, Center, Box } from "@chakra-ui/react";
 import ProjectCard from "../UI/ProjectCard";
 import SectionContainer from "./SectionContainer";
 import { projectsData } from "../constants/projectsData";
+import { Reveal } from "../UI/Reveal";
 
 const Projects = () => {
   return (
