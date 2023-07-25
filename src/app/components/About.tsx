@@ -89,6 +89,8 @@ const About = () => {
                 label={"My LinkedIn Profile"}
               />
             </SocialIcon>
+          </Reveal>
+          <Reveal>
             <SocialIcon href={"https://github.com/MarioLisbona/"}>
               <CustomIcon
                 color={"sage"}
@@ -96,6 +98,8 @@ const About = () => {
                 label={"My Github Profile"}
               />
             </SocialIcon>
+          </Reveal>
+          <Reveal>
             <SocialIcon href={"https://www.instagram.com/muzzza79/"}>
               <CustomIcon
                 color={"sage"}
