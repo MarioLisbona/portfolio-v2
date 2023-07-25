@@ -40,9 +40,13 @@ const About = () => {
         >
           <Reveal>
             <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
-              <Text textStyle={"context"} my={"1rem"}>
-                {Parser(aboutContent.content)}
-              </Text>
+              {aboutContent.content.map((para, idx) => (
+                <Reveal key={idx}>
+                  <Text textStyle={"context"} my={"1rem"}>
+                    {para}
+                  </Text>
+                </Reveal>
+              ))}
             </Flex>
           </Reveal>
           <Flex
