@@ -1,16 +1,6 @@
 "use client";
-
-import {
-  Box,
-  Button,
-  Flex,
-  Highlight,
-  Icon,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Highlight, Link, Text } from "@chakra-ui/react";
 import SectionContainer from "./SectionContainer";
-import { FaCircle } from "react-icons/fa";
 import { handleLinkClick } from "../lib/utils";
 import FullStopIcon from "../UI/FullStopIcon";
 import { Reveal } from "../UI/Reveal";
