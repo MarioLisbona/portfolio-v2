@@ -79,6 +79,13 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
+            <Button
+              display={{ base: "none", md: "block" }}
+              variant={"filledSqBtn"}
+              me={"1rem"}
+            >
+              My Resume
+            </Button>
             <Button onClick={toggleColorMode} variant={"filledSqBtn"}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
