@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import { SiZincsearch } from "react-icons/si";
 
 interface Props {
   children: JSX.Element;
@@ -11,10 +12,12 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
   const isInView = useInView(ref, { once: true });
 
   const mainControls = useAnimation();
+  const slideControls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
+      slideControls.start("visible");
     }
   }, [isInView]);
   return (
@@ -30,7 +33,24 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
       >
         {children}
       </motion.div>
-      {/* TODO sage animation */}
+      {/* <motion.div
+        variants={{
+          hidden: { left: 0 },
+          visible: { left: "100%" },
+        }}
+        initial="hidden"
+        animate={slideControls}
+        transition={{ duration: 0.5 }}
+        style={{
+          position: "absolute",
+          top: 4,
+          bottom: 4,
+          left: 0,
+          right: 0,
+          backgroundColor: "sage",
+          zIndex: 20,
+        }}
+      /> */}
     </div>
   );
 };
