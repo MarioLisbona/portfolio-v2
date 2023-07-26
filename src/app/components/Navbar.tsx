@@ -72,7 +72,12 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Link href={"#"}>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1S-5o1ySPBNrgspbyKLNuya6tIpixHI_o/view?usp=drive_link"
+              }
+              target={"_blank"}
+            >
               <Button
                 display={{ base: "none", md: "inline-block" }}
                 variant={"filledSqBtn"}
@@ -108,7 +113,12 @@ export default function Navbar() {
                 </Link>
               ))}
               <Flex>
-                <Link href={"#"}>
+                <Link
+                  href={
+                    "https://drive.google.com/file/d/1S-5o1ySPBNrgspbyKLNuya6tIpixHI_o/view?usp=drive_link"
+                  }
+                  target={"_blank"}
+                >
                   <Button variant={"filledSqBtn"} me={"1rem"}>
                     My Resume
                   </Button>
