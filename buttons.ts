@@ -16,7 +16,7 @@ const filledSqLargeBtn = defineStyle({
 });
 
 const filledSqBtn = defineStyle({
-  fontSize: { base: "16px", lg: "18px" },
+  fontSize: { base: "12px", lg: "18px" },
   h: "40px",
   minW: "50px",
   fontWeight: { base: "500", lg: "600" },
