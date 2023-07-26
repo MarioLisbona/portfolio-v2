@@ -62,7 +62,7 @@ const ProjectModal = ({
           <Flex>
             <Flex me={"1rem"} align={"center"}>
               {project.repo && (
-                <Link href={project.repo!}>
+                <Link href={project.repo!} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
                       small
@@ -80,7 +80,7 @@ const ProjectModal = ({
             </Flex>
             <Flex align={"center"}>
               {project.site && (
-                <Link href={project.site!}>
+                <Link href={project.site!} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
                       small
