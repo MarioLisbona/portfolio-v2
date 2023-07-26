@@ -35,6 +35,7 @@ const Contact = () => {
             <Link
               href={"mailto:mario.lisbona@gmail.com"}
               _hover={{ color: "tan" }}
+              target={"_blank"}
             >
               <Flex mt={"1rem"} align={"center"}>
                 <Flex>
