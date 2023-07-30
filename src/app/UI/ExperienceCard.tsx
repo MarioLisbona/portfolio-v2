@@ -8,11 +8,13 @@ import {
   useColorModeValue,
   UnorderedList,
   ListItem,
+  ListIcon,
 } from "@chakra-ui/react";
 import { ExperienceDataProps } from "../constants/ExperienceData";
 import TechBox from "./TechBox";
 import Parser from "html-react-parser";
 import { Reveal } from "./Reveal";
+import { MdCheckCircle } from "react-icons/md";
 
 const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
   return (
@@ -44,9 +46,14 @@ const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
               {exp.description.map((item, idx) => (
                 <Reveal key={idx}>
                   <ListItem>
-                    <Text textStyle={"context"} mb={"0.5rem"}>
-                      {Parser(item)}
-                    </Text>
+                    <Flex align={"flex-start"} mb={"0.5rem"}>
+                      <ListIcon
+                        as={MdCheckCircle}
+                        color={"tan"}
+                        mt={"0.25rem"}
+                      />
+                      <Text textStyle={"context"}>{Parser(item)}</Text>
+                    </Flex>
                   </ListItem>
                 </Reveal>
               ))}
