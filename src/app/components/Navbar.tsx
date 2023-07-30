@@ -16,6 +16,7 @@ import {
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { navbarLinks } from "../constants/links";
 import logo from "../../../public/images/ml-logo.png";
+import darkLogo from "../../../public/images/ml-logo-dark.png";
 import { handleLinkClick, handleMobileNavClick } from "../lib/utils";
 
 export default function Navbar() {
@@ -50,11 +51,19 @@ export default function Navbar() {
               onClick={(event) => handleLinkClick(event, "hero")}
             >
               <Box>
-                <Image
-                  boxSize={"50px"}
-                  src={logo.src}
-                  alt={"Mario Lisbona logo"}
-                />
+                {colorMode === "light" ? (
+                  <Image
+                    boxSize={"50px"}
+                    src={logo.src}
+                    alt={"Mario Lisbona logo"}
+                  />
+                ) : (
+                  <Image
+                    boxSize={"50px"}
+                    src={darkLogo.src}
+                    alt={"Mario Lisbona dark mode logo"}
+                  />
+                )}
               </Box>
             </Link>
             <HStack
