@@ -7,7 +7,7 @@ import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
 export default function Footer() {
   return (
     <Flex
-      px={{ base: ".25rem", lg: "1rem" }}
+      px={{ base: "1rem", lg: "1rem" }}
       py={{ base: ".25rem", lg: "1rem" }}
       justify={"space-between"}
       align={"center"}
