@@ -7,9 +7,11 @@ import {
   Flex,
   Image,
   Link,
+  Icon,
 } from "@chakra-ui/react";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
+import { MdOutlineClose } from "react-icons/md";
 import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
 import CustomIcon from "./CustomIcon";
@@ -27,7 +29,13 @@ const ProjectModal = ({
     <ModalOverlay
       bg="blackAlpha.300"
       backdropFilter="blur(10px) hue-rotate(45deg)"
-    />
+    >
+      <Flex justify={"flex-end"}>
+        <Button variant={"filledSqBtn"} onClick={onClose}>
+          <Icon as={MdOutlineClose} />
+        </Button>
+      </Flex>
+    </ModalOverlay>
   );
   return (
     <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
@@ -96,6 +104,11 @@ const ProjectModal = ({
                 </Link>
               )}
             </Flex>
+          </Flex>
+          <Flex justify={"flex-end"}>
+            <Button variant={"filledSqBtn"} onClick={onClose}>
+              Close
+            </Button>
           </Flex>
         </Flex>
       </ModalContent>
