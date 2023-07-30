@@ -47,7 +47,7 @@ const theme = extendTheme({
     },
     contextBold: {
       fontFamily: "headingBold",
-      fontSize: ["18px", "16px", "32px"],
+      fontSize: ["12px", "14px", "22px"],
       lineHeight: "125%",
     },
     smContext: {

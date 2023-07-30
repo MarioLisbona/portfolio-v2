@@ -7,9 +7,11 @@ import {
   Flex,
   Image,
   Link,
+  Icon,
 } from "@chakra-ui/react";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
+import { MdOutlineClose } from "react-icons/md";
 import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
 import CustomIcon from "./CustomIcon";
@@ -27,7 +29,13 @@ const ProjectModal = ({
     <ModalOverlay
       bg="blackAlpha.300"
       backdropFilter="blur(10px) hue-rotate(45deg)"
-    />
+    >
+      <Flex justify={"flex-end"}>
+        <Button variant={"filledSqBtn"} onClick={onClose}>
+          <Icon as={MdOutlineClose} />
+        </Button>
+      </Flex>
+    </ModalOverlay>
   );
   return (
     <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
@@ -45,17 +53,19 @@ const ProjectModal = ({
           bg={"blackAlpha.800"}
           p={"2rem"}
           maxW={"900px"}
+          maxH={"500px"}
+          overflowY={"scroll"}
         >
-          <Text color={"white"} textStyle={"extraSmallHeadingBold"} mb={"1rem"}>
+          <Text color={"white"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             {project.title}
           </Text>
-          <Text color={"tan"} textStyle={"smBold"} mb={"1rem"}>
+          <Text color={"tan"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             {project.tech}
           </Text>
           <Text color={"white"} textStyle={"context"} mb={"1rem"}>
             {Parser(project.content)}
           </Text>
-          <Text color={"white"} textStyle={"extraSmallHeadingBold"} mb={"1rem"}>
+          <Text color={"white"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             Project Links
             <FullStopIcon header modal />
           </Text>
@@ -65,13 +75,12 @@ const ProjectModal = ({
                 <Link href={project.repo!} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
-                      small
                       color={"white"}
                       icon={SiGithub}
                       me={"0.5rem"}
                       label={"Project Github"}
                     />
-                    <Text color={"white"} textStyle={"smBold"}>
+                    <Text color={"white"} textStyle={"contextBold"}>
                       source code
                     </Text>
                   </Button>
@@ -83,19 +92,23 @@ const ProjectModal = ({
                 <Link href={project.site!} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
-                      small
                       color={"white"}
                       icon={LuExternalLink}
                       me={"0.5rem"}
                       label={"Project Live Site"}
                     />
-                    <Text color={"white"} textStyle={"smBold"}>
+                    <Text color={"white"} textStyle={"contextBold"}>
                       Live Site
                     </Text>
                   </Button>
                 </Link>
               )}
             </Flex>
+          </Flex>
+          <Flex justify={"flex-end"} mt={"1rem"}>
+            <Button variant={"filledSqBtn"} onClick={onClose}>
+              Close
+            </Button>
           </Flex>
         </Flex>
       </ModalContent>
