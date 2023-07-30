@@ -41,8 +41,7 @@ const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
                 {exp.location}
               </Text>
             </Flex>
-
-            <UnorderedList>
+            <UnorderedList m={"0rem"}>
               {exp.description.map((item, idx) => (
                 <Reveal key={idx}>
                   <ListItem>
