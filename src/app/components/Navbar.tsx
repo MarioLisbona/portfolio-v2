@@ -50,7 +50,11 @@ export default function Navbar() {
               onClick={(event) => handleLinkClick(event, "hero")}
             >
               <Box>
-                <Image boxSize={"50px"} src={logo.src} alt={"Resonate logo"} />
+                <Image
+                  boxSize={"50px"}
+                  src={logo.src}
+                  alt={"Mario Lisbona logo"}
+                />
               </Box>
             </Link>
             <HStack
