@@ -1,26 +1,13 @@
 import {
   CardBody,
-  // Image,
   Stack,
   Text,
   Card,
   Flex,
   Link,
-  Icon,
   Button,
-  Wrap,
   useColorModeValue,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
   useDisclosure,
-  CardHeader,
-  CardFooter,
-  Heading,
   Image,
 } from "@chakra-ui/react";
 import { SiGithub } from "react-icons/si";
@@ -30,6 +17,7 @@ import CustomIcon from "./CustomIcon";
 import { ProjectDataProps } from "../constants/projectsData";
 import ProjectModal from "./ProjectModal";
 import { Reveal } from "./Reveal";
+import { motion } from "framer-motion";
 
 const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -45,11 +33,22 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
           >
             <Link onClick={onOpen}>
               <CardBody paddingBottom={0}>
-                <Image
-                  src={project.thumbnail}
-                  width={600}
-                  alt={`Screenshot of ${project.title} project`}
-                />
+                <motion.div
+                  whileHover={{
+                    scale: 1.03,
+                    rotate: "1deg",
+                  }}
+                  transition={{
+                    duration: 0.2,
+                    delay: 0.1,
+                  }}
+                >
+                  <Image
+                    src={project.thumbnail}
+                    width={600}
+                    alt={`Screenshot of ${project.title} project`}
+                  />
+                </motion.div>
               </CardBody>
             </Link>
           </Card>
