@@ -45,7 +45,10 @@ const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
               {exp.description.map((item, idx) => (
                 <Reveal key={idx}>
                   <ListItem>
-                    <Flex align={"flex-start"} mb={"0.5rem"}>
+                    <Flex
+                      align={"flex-start"}
+                      mb={{ base: "0.25rem", md: "0.5rem" }}
+                    >
                       <ListIcon
                         as={MdCheckCircle}
                         color={"tan"}
