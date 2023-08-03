@@ -3,7 +3,7 @@ import client from "./sanity.client";
 
 export async function getProfile() {
   return client.fetch(
-    groq`*[_type == "profile"]{
+    groq`*[_type == "profile"][0]{
       _id,
       firstName,
       lastName,

@@ -5,14 +5,14 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import { getProfile } from "@/sanity/sanity.query";
+import { ProfileType } from "@/types";
 
 export default async function Home() {
-  const profile = await getProfile();
+  const profile: ProfileType = await getProfile();
 
-  console.log(profile);
   return (
     <SectionContainer>
-      <Hero />
+      <Hero profile={profile} />
       <About />
       <Projects />
       <Experience />

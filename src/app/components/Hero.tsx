@@ -5,8 +5,9 @@ import { Reveal } from "../UI/Reveal";
 import FullStopIcon from "../UI/FullStopIcon";
 import { handleLinkClick } from "../lib/utils";
 import SectionContainer from "../components/SectionContainer";
+import { ProfileType } from "@/types";
 
-export default function Hero() {
+export default function Hero({ profile }: any) {
   return (
     <Box id={"hero"}>
       <SectionContainer>
@@ -22,7 +23,7 @@ export default function Hero() {
         >
           <Reveal>
             <Text p={"0"} textStyle={"headingBold"}>
-              Hi, I&#39;m Mario
+              Hi, I&#39;m {profile.firstName}
               <FullStopIcon header />
             </Text>
           </Reveal>
@@ -45,8 +46,7 @@ export default function Hero() {
               textStyle={"contextBold"}
               mt={"1rem"}
             >
-              I&#39;ve been developing full stack applications for the last year
-              and a half. Lets connect!
+              {profile.shortBio}
             </Text>
           </Reveal>
           <Reveal>
