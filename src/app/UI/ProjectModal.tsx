@@ -57,8 +57,8 @@ const ProjectModal = ({
           bg={"blackAlpha.800"}
           p={"2rem"}
           maxW={"900px"}
-          maxH={"500px"}
-          overflowY={"scroll"}
+          // maxH={"500px"}
+          // overflowY={"scroll"}
         >
           <Text color={"white"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             {project.title}
@@ -66,10 +66,6 @@ const ProjectModal = ({
           <Text color={"tan"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             {project.tech}
           </Text>
-          {/* <Text color={"white"} textStyle={"context"} mb={"1rem"}>
-            {Parser(project.content)}
-          </Text> */}
-
           {project.longDescription.map((para, idx) => (
             <Text key={idx} color={"white"} textStyle={"context"} mb={"1rem"}>
               <PortableText value={para} />
