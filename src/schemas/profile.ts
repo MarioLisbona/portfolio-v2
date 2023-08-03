@@ -75,21 +75,18 @@ const profile = {
         {
           name: "github",
           title: "Github URL",
-          icon: "SiGithub",
           type: "url",
           initialValue: "https://github.com/",
         },
         {
           name: "linkedin",
           title: "Linkedin URL",
-          icon: "SiLinkedin",
           type: "url",
           initialValue: "https://linkedin.com/in/",
         },
         {
           name: "instagram",
           title: "Instagram URL",
-          icon: "SiInstagram",
           type: "url",
           initialValue: "https://instagram.com/",
         },
