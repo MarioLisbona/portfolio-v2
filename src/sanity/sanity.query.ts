@@ -24,7 +24,7 @@ export async function getProjects() {
   return client.fetch(
     groq`*[_type == "project"] {
       _id,
-      thumbnail,
+      thumbnail {alt, "image": asset->url},
       title, 
       tech,
       shortDescription,

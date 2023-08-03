@@ -15,7 +15,12 @@ const Projects = ({ projects }: { projects: ProjectType[] }) => {
         <Header title="Projects" reverse />
         <Flex w={"100%"}>
           <Wrap spacing={{ base: "20px", xl: "50px" }} justify={"center"}>
-            {projectsData.map((project, idx) => (
+            {/* {projectsData.map((project, idx) => (
+              <WrapItem key={idx}>
+                <ProjectCard project={project} />
+              </WrapItem>
+            ))} */}
+            {projects.map((project, idx) => (
               <WrapItem key={idx}>
                 <ProjectCard project={project} />
               </WrapItem>

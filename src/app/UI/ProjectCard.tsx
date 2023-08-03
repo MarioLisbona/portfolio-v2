@@ -8,8 +8,9 @@ import {
   Button,
   useColorModeValue,
   useDisclosure,
-  Image,
+  // Image,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
 import SocialIcon from "./SocialIcon";
@@ -18,8 +19,10 @@ import { ProjectDataProps } from "../constants/projectsData";
 import ProjectModal from "./ProjectModal";
 import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";
+import { ProjectType } from "@/types";
 
-const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
+const ProjectCard = ({ project }: { project: ProjectType }) => {
+  console.log(project);
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -44,9 +47,10 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
                   }}
                 >
                   <Image
-                    src={project.thumbnail}
+                    src={project.thumbnail.image}
                     width={600}
-                    alt={`Screenshot of ${project.title} project`}
+                    height={600}
+                    alt={project.thumbnail.alt}
                   />
                 </motion.div>
               </CardBody>
@@ -63,10 +67,10 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
               <Flex w={"100%"} align={"center"} justify={"space-between"}>
                 <Reveal>
                   <Text textStyle={"extraSmallHeadingBold"}>
-                    {project.title}
+                    {/* {project.title} */}
                   </Text>
                 </Reveal>
-                <Flex>
+                {/* <Flex>
                   {project.repo && (
                     <Reveal>
                       <SocialIcon href={project.repo!}>
@@ -90,18 +94,18 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
                       </SocialIcon>
                     </Reveal>
                   )}
-                </Flex>
+                </Flex> */}
               </Flex>
               <Flex w={"100%"} justify={"flex-start"}>
                 <Reveal>
                   <Text textStyle={"smBold"} color={"tan"}>
-                    {project.tech}
+                    {/* {project.tech} */}
                   </Text>
                 </Reveal>
               </Flex>
-              <Reveal>
+              {/* <Reveal>
                 <Text textStyle={"context"}>{project.intro}</Text>
-              </Reveal>
+              </Reveal> */}
               <Flex justify={"flex-start"}>
                 <Reveal>
                   <Button variant={"linkBtn"} onClick={onOpen}>
@@ -115,7 +119,7 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
           </CardBody>
         </Card>
       </Flex>
-      <ProjectModal isOpen={isOpen} onClose={onClose} project={project} />
+      {/* <ProjectModal isOpen={isOpen} onClose={onClose} project={project} /> */}
     </>
   );
 };
