@@ -1,2 +1,3 @@
 import profile from "./profile";
-export const schemaTypes = [profile];
+import project from "./project";
+export const schemaTypes = [profile, project];
