@@ -5,10 +5,11 @@ import {
   Button,
   Text,
   Flex,
-  Image,
+  // Image,
   Link,
   Icon,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
 import { MdOutlineClose } from "react-icons/md";
@@ -43,10 +44,11 @@ const ProjectModal = ({
       <CustomOverlay />
       <ModalContent borderRadius={"1rem"} minWidth="fit-content">
         <Image
-          borderTopRadius={"1rem"}
-          src={project.thumbnail}
+          style={{ borderRadius: "1rem 1rem 0 0" }}
+          src={project.thumbnail.image}
           width={900}
-          alt={`Screenshot of ${project.title} project`}
+          height={600}
+          alt={project.thumbnail.alt}
         />
         <Flex
           direction={"column"}
