@@ -25,11 +25,12 @@ const project = {
         },
       ],
     }),
-    {
+    defineField({
       name: "buildDate",
       title: "Build date",
       type: "date",
-    },
+      validation: (rule) => rule.required(),
+    }),
     defineField({
       name: "tech",
       title: "Tech",
