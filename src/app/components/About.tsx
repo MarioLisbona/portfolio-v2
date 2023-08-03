@@ -15,7 +15,7 @@ import { ProfileType } from "@/types";
 import { PortableText } from "@portabletext/react";
 
 const About = ({ profile }: { profile: ProfileType }) => {
-  console.log(profile.fullBio);
+  console.log(profile.socialLinks);
   return (
     <Box
       id={"about"}
