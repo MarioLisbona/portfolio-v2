@@ -1,1 +1,2 @@
-export const schemaTypes = []
+import profile from "./profile";
+export const schemaTypes = [profile];
