@@ -33,6 +33,6 @@ export const techStack = [
     label: "MOngoDB",
   },
   {
-    label: "Github",
+    label: "GitHub",
   },
 ];

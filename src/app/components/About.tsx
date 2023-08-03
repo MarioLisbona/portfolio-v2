@@ -12,8 +12,10 @@ import CustomIcon from "../UI/CustomIcon";
 import SocialIcon from "../UI/SocialIcon";
 import { Reveal } from "../UI/Reveal";
 import { ProfileType } from "@/types";
+import { PortableText } from "@portabletext/react";
 
 const About = ({ profile }: { profile: ProfileType }) => {
+  console.log(profile.fullBio);
   return (
     <Box
       id={"about"}
@@ -29,14 +31,13 @@ const About = ({ profile }: { profile: ProfileType }) => {
         >
           <Reveal>
             <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
-              {/* {aboutContent.content.map((para, idx) => (
+              {profile.fullBio.map((para, idx) => (
                 <Reveal key={idx}>
-                  <Text textStyle={"context"} my={"1rem"}>
-                    {para}
+                  <Text as={"span"} textStyle={"context"} my={"1rem"}>
+                    <PortableText value={para} />
                   </Text>
                 </Reveal>
-              ))} */}
-              <Reveal></Reveal>
+              ))}
             </Flex>
           </Reveal>
           <Flex
@@ -52,11 +53,11 @@ const About = ({ profile }: { profile: ProfileType }) => {
               </Flex>
             </Reveal>
             <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
-              {techStack.map((item, idx) => (
+              {profile.skills.map((item, idx) => (
                 <Reveal key={idx}>
                   <WrapItem>
                     <TechBox>
-                      <Text textStyle={"smBold"}>{item.label}</Text>
+                      <Text textStyle={"smBold"}>{item}</Text>
                     </TechBox>
                   </WrapItem>
                 </Reveal>
