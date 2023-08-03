@@ -13,7 +13,7 @@ export default async function Home() {
   return (
     <SectionContainer>
       <Hero profile={profile} />
-      <About />
+      <About profile={profile} />
       <Projects />
       <Experience />
       <Contact />

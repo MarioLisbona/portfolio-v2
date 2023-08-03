@@ -11,8 +11,9 @@ import Header from "../UI/Header";
 import CustomIcon from "../UI/CustomIcon";
 import SocialIcon from "../UI/SocialIcon";
 import { Reveal } from "../UI/Reveal";
+import { ProfileType } from "@/types";
 
-const About = () => {
+const About = ({ profile }: { profile: ProfileType }) => {
   return (
     <Box
       id={"about"}
@@ -28,13 +29,14 @@ const About = () => {
         >
           <Reveal>
             <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
-              {aboutContent.content.map((para, idx) => (
+              {/* {aboutContent.content.map((para, idx) => (
                 <Reveal key={idx}>
                   <Text textStyle={"context"} my={"1rem"}>
                     {para}
                   </Text>
                 </Reveal>
-              ))}
+              ))} */}
+              <Reveal></Reveal>
             </Flex>
           </Reveal>
           <Flex
