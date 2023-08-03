@@ -1,9 +1,9 @@
 import { defineField } from "sanity";
 import { BiUser } from "react-icons/bi";
 
-const about = {
-  name: "about",
-  title: "About",
+const profile = {
+  name: "profile",
+  title: "Profile",
   type: "document",
   icon: BiUser,
   fields: [
@@ -93,4 +93,4 @@ const about = {
   ],
 };
 
-export default about;
+export default profile;
