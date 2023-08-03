@@ -7,7 +7,8 @@ import { handleLinkClick } from "../lib/utils";
 import SectionContainer from "../components/SectionContainer";
 import { ProfileType } from "@/types";
 
-export default function Hero({ profile }: any) {
+export default function Hero({ profile }: { profile: ProfileType }) {
+  console.log(profile);
   return (
     <Box id={"hero"}>
       <SectionContainer>
