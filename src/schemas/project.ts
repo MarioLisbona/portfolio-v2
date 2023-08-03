@@ -17,6 +17,7 @@ const project = {
       title: "Thumbnail",
       type: "image",
       description: "Upload an image for the project",
+      validation: (rule) => rule.required(),
       fields: [
         {
           name: "alt",
