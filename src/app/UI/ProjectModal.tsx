@@ -79,10 +79,10 @@ const ProjectModal = ({
             Project Links
             <FullStopIcon header modal />
           </Text>
-          {/* <Flex>
+          <Flex>
             <Flex me={"1rem"} align={"center"}>
-              {project.repo && (
-                <Link href={project.repo!} target={"_blank"}>
+              {project.projectLinks.github && (
+                <Link href={project.projectLinks.github} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
                       color={"white"}
@@ -98,8 +98,8 @@ const ProjectModal = ({
               )}
             </Flex>
             <Flex align={"center"}>
-              {project.site && (
-                <Link href={project.site!} target={"_blank"}>
+              {project.projectLinks.liveSite && (
+                <Link href={project.projectLinks.liveSite} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
                       color={"white"}
@@ -114,7 +114,7 @@ const ProjectModal = ({
                 </Link>
               )}
             </Flex>
-          </Flex> */}
+          </Flex>
           <Flex justify={"flex-end"} mt={"1rem"}>
             <Button variant={"filledSqBtn"} onClick={onClose}>
               Close
