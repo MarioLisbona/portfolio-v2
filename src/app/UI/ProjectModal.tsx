@@ -16,6 +16,7 @@ import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
 import CustomIcon from "./CustomIcon";
 import FullStopIcon from "./FullStopIcon";
+import { ProjectType } from "@/types";
 const ProjectModal = ({
   isOpen,
   onClose,
@@ -23,7 +24,7 @@ const ProjectModal = ({
 }: {
   isOpen: boolean;
   onClose: () => void;
-  project: ProjectDataProps;
+  project: ProjectType;
 }) => {
   const CustomOverlay = () => (
     <ModalOverlay
@@ -62,14 +63,14 @@ const ProjectModal = ({
           <Text color={"tan"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             {project.tech}
           </Text>
-          <Text color={"white"} textStyle={"context"} mb={"1rem"}>
+          {/* <Text color={"white"} textStyle={"context"} mb={"1rem"}>
             {Parser(project.content)}
-          </Text>
+          </Text> */}
           <Text color={"white"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             Project Links
             <FullStopIcon header modal />
           </Text>
-          <Flex>
+          {/* <Flex>
             <Flex me={"1rem"} align={"center"}>
               {project.repo && (
                 <Link href={project.repo!} target={"_blank"}>
@@ -104,7 +105,7 @@ const ProjectModal = ({
                 </Link>
               )}
             </Flex>
-          </Flex>
+          </Flex> */}
           <Flex justify={"flex-end"} mt={"1rem"}>
             <Button variant={"filledSqBtn"} onClick={onClose}>
               Close

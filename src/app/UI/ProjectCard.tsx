@@ -22,7 +22,7 @@ import { motion } from "framer-motion";
 import { ProjectType } from "@/types";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
-  console.log(project);
+  console.log(project.projectLinks);
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -70,22 +70,22 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                     {project.title}
                   </Text>
                 </Reveal>
-                {/* <Flex>
-                  {project.repo && (
+                <Flex>
+                  {project.projectLinks.github && (
                     <Reveal>
-                      <SocialIcon href={project.repo!}>
+                      <SocialIcon href={project.projectLinks.github}>
                         <CustomIcon
                           color={"sage"}
                           icon={SiGithub}
-                          me={project.site ? "1rem" : "0rem"}
+                          me={project.projectLinks.liveSite ? "1rem" : "0rem"}
                           label={"Project Github"}
                         />
                       </SocialIcon>
                     </Reveal>
                   )}
-                  {project.site && (
+                  {project.projectLinks.liveSite && (
                     <Reveal>
-                      <SocialIcon href={project.site!}>
+                      <SocialIcon href={project.projectLinks.liveSite!}>
                         <CustomIcon
                           color={"sage"}
                           icon={LuExternalLink}
@@ -94,18 +94,18 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                       </SocialIcon>
                     </Reveal>
                   )}
-                </Flex> */}
+                </Flex>
               </Flex>
               <Flex w={"100%"} justify={"flex-start"}>
                 <Reveal>
                   <Text textStyle={"smBold"} color={"tan"}>
-                    {/* {project.tech} */}
+                    {project.tech}
                   </Text>
                 </Reveal>
               </Flex>
-              {/* <Reveal>
-                <Text textStyle={"context"}>{project.intro}</Text>
-              </Reveal> */}
+              <Reveal>
+                <Text textStyle={"context"}>{project.shortDescription}</Text>
+              </Reveal>
               <Flex justify={"flex-start"}>
                 <Reveal>
                   <Button variant={"linkBtn"} onClick={onOpen}>
@@ -119,7 +119,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           </CardBody>
         </Card>
       </Flex>
-      {/* <ProjectModal isOpen={isOpen} onClose={onClose} project={project} /> */}
+      <ProjectModal isOpen={isOpen} onClose={onClose} project={project} />
     </>
   );
 };
