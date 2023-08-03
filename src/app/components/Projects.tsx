@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Header from "../UI/Header";
 import { Wrap, Flex, WrapItem, Box } from "@chakra-ui/react";

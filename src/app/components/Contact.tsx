@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SectionContainer from "./SectionContainer";
 import CenterHeader from "../UI/CenterHeader";
