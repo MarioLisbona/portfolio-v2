@@ -32,5 +32,5 @@ export type ProjectType = {
   title: string;
   tech: string;
   shortDescription: string;
-  longDescription: string;
+  longDescription: PortableTextBlock[];
 };
