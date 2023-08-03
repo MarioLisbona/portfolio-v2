@@ -67,7 +67,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
               <Flex w={"100%"} align={"center"} justify={"space-between"}>
                 <Reveal>
                   <Text textStyle={"extraSmallHeadingBold"}>
-                    {/* {project.title} */}
+                    {project.title}
                   </Text>
                 </Reveal>
                 {/* <Flex>
