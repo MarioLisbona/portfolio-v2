@@ -31,11 +31,12 @@ export type ProfileType = {
 
 export type ProjectType = {
   _id: string;
+  title: string;
   thumbnail: {
     alt: string;
     image: string;
   };
-  title: string;
+  buildDate: string;
   tech: string;
   shortDescription: string;
   longDescription: PortableTextBlock[];

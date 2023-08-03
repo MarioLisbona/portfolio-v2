@@ -25,6 +25,11 @@ const project = {
         },
       ],
     }),
+    {
+      name: "buildDate",
+      title: "Build date",
+      type: "date",
+    },
     defineField({
       name: "tech",
       title: "Tech",

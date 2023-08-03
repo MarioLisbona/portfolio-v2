@@ -22,7 +22,6 @@ import { motion } from "framer-motion";
 import { ProjectType } from "@/types";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
-  console.log(project.projectLinks);
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>

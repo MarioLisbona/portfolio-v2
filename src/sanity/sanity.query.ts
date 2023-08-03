@@ -22,7 +22,7 @@ export async function getProfile() {
 
 export async function getProjects() {
   return client.fetch(
-    groq`*[_type == "project"] {
+    groq`*[_type == "project"] | order(buildDate desc) {
       _id,
       thumbnail {alt, "image": asset->url},
       title, 
