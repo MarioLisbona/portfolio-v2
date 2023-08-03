@@ -56,12 +56,13 @@ const project = {
       title: "Project Links",
       type: "object",
       fields: [
-        {
+        defineField({
           name: "github",
           title: "Github Repo",
           type: "url",
           initialValue: "https://github.com/",
-        },
+          validation: (rule) => rule.required(),
+        }),
         {
           name: "liveSite",
           title: "Live Site",
