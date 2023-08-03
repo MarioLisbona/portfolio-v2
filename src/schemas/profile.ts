@@ -88,7 +88,7 @@ const profile = {
           name: "instagram",
           title: "Instagram URL",
           type: "url",
-          initialValue: "https://twitter.com/",
+          initialValue: "https://instagram.com/",
         },
       ],
       options: {
