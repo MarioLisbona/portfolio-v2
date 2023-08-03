@@ -26,6 +26,20 @@ const profile = {
       validation: (rule) => rule.required(),
     }),
     {
+      name: "profileImage",
+      title: "Profile Image",
+      type: "image",
+      description: "Upload a profile picture",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    },
+    {
       name: "shortBio",
       title: "Short Bio",
       type: "text",
