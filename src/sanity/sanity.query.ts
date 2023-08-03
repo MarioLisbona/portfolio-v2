@@ -19,3 +19,16 @@ export async function getProfile() {
     }`
   );
 }
+
+export async function getProjects() {
+  return client.fetch(
+    groq`*[_type == "project"] {
+      _id,
+      thumbnail,
+      title, 
+      tech,
+      shortDescription,
+      longDescription
+    }`
+  );
+}

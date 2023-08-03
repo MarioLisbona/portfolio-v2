@@ -22,3 +22,15 @@ export type ProfileType = {
   socialLinks: SocialLinksProps;
   skills: string[];
 };
+
+export type ProjectType = {
+  _id: string;
+  thumbnail: {
+    alt: string;
+    image: string;
+  };
+  title: string;
+  tech: string;
+  shortDescription: string;
+  longDescription: string;
+};
