@@ -1,4 +1,9 @@
 import { PortableTextBlock } from "sanity";
+export type SocialLinksProps = {
+  linkedin: string;
+  github: string;
+  instagram: string;
+};
 
 export type ProfileType = {
   _id: string;
@@ -14,6 +19,6 @@ export type ProfileType = {
   location: string;
   fullBio: PortableTextBlock[];
   resumeURL: string;
-  socialLinks: string[];
+  socialLinks: SocialLinksProps;
   skills: string[];
 };

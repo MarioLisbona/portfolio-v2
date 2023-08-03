@@ -15,7 +15,6 @@ import { ProfileType } from "@/types";
 import { PortableText } from "@portabletext/react";
 
 const About = ({ profile }: { profile: ProfileType }) => {
-  console.log(profile.socialLinks);
   return (
     <Box
       id={"about"}
@@ -75,7 +74,7 @@ const About = ({ profile }: { profile: ProfileType }) => {
             <CustomIcon color={"coolGray"} icon={PiArrowRightBold} />
           </Reveal>
           <Reveal>
-            <SocialIcon href={"https://www.linkedin.com/in/mariolisbona/"}>
+            <SocialIcon href={profile.socialLinks.linkedin}>
               <CustomIcon
                 color={"sage"}
                 icon={SiLinkedin}
@@ -84,7 +83,7 @@ const About = ({ profile }: { profile: ProfileType }) => {
             </SocialIcon>
           </Reveal>
           <Reveal>
-            <SocialIcon href={"https://github.com/MarioLisbona/"}>
+            <SocialIcon href={profile.socialLinks.github}>
               <CustomIcon
                 color={"sage"}
                 icon={SiGithub}
@@ -93,7 +92,7 @@ const About = ({ profile }: { profile: ProfileType }) => {
             </SocialIcon>
           </Reveal>
           <Reveal>
-            <SocialIcon href={"https://www.instagram.com/muzzza79/"}>
+            <SocialIcon href={profile.socialLinks.instagram}>
               <CustomIcon
                 color={"sage"}
                 icon={SiInstagram}
