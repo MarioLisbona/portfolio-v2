@@ -1,8 +1,14 @@
 import { PortableTextBlock } from "sanity";
+
 export type SocialLinksProps = {
   linkedin: string;
   github: string;
   instagram: string;
+};
+
+export type ProjectReposProps = {
+  github: string;
+  liveSite?: string;
 };
 
 export type ProfileType = {
@@ -33,4 +39,5 @@ export type ProjectType = {
   tech: string;
   shortDescription: string;
   longDescription: PortableTextBlock[];
+  projectRepos: ProjectReposProps;
 };

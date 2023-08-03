@@ -7,6 +7,12 @@ const project = {
   icon: GoProjectSymlink,
   fields: [
     defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "thumbnail",
       title: "Thumbnail",
       type: "image",
@@ -18,12 +24,6 @@ const project = {
           type: "string",
         },
       ],
-    }),
-    defineField({
-      name: "title",
-      title: "Title",
-      type: "string",
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: "tech",
@@ -44,6 +44,24 @@ const project = {
       of: [{ type: "block" }],
       validation: (rule) => rule.required(),
     }),
+    {
+      name: "projectRepos",
+      title: "Project Repositories",
+      type: "object",
+      fields: [
+        {
+          name: "github",
+          title: "Github URL",
+          type: "url",
+          initialValue: "https://github.com/",
+        },
+        {
+          name: "liveSite",
+          title: "Live Site",
+          type: "url",
+        },
+      ],
+    },
   ],
 };
 export default project;

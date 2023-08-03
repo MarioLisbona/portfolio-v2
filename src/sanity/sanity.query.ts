@@ -28,7 +28,8 @@ export async function getProjects() {
       title, 
       tech,
       shortDescription,
-      longDescription
+      longDescription,
+      projectRepos
     }`
   );
 }

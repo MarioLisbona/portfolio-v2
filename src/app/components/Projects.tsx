@@ -5,8 +5,10 @@ import { Wrap, Flex, WrapItem, Box } from "@chakra-ui/react";
 import ProjectCard from "../UI/ProjectCard";
 import SectionContainer from "./SectionContainer";
 import { projectsData } from "../constants/projectsData";
+import { ProjectType } from "@/types";
 
-const Projects = () => {
+const Projects = ({ projects }: { projects: ProjectType[] }) => {
+  console.log(projects);
   return (
     <Box id={"projects"} pt={"70px"} mt={"-70px"}>
       <SectionContainer>
