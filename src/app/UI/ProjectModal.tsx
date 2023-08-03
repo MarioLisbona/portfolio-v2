@@ -18,6 +18,7 @@ import { ProjectDataProps } from "../constants/projectsData";
 import CustomIcon from "./CustomIcon";
 import FullStopIcon from "./FullStopIcon";
 import { ProjectType } from "@/types";
+import { PortableText } from "@portabletext/react";
 const ProjectModal = ({
   isOpen,
   onClose,
@@ -68,6 +69,12 @@ const ProjectModal = ({
           {/* <Text color={"white"} textStyle={"context"} mb={"1rem"}>
             {Parser(project.content)}
           </Text> */}
+
+          {project.longDescription.map((para, idx) => (
+            <Text key={idx} color={"white"} textStyle={"context"} mb={"1rem"}>
+              <PortableText value={para} />
+            </Text>
+          ))}
           <Text color={"white"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             Project Links
             <FullStopIcon header modal />
