@@ -16,7 +16,7 @@ export default async function Home() {
       <About profile={profile} />
       <Projects />
       <Experience />
-      <Contact />
+      <Contact profile={profile} />
     </SectionContainer>
   );
 }
