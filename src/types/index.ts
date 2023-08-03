@@ -39,5 +39,5 @@ export type ProjectType = {
   tech: string;
   shortDescription: string;
   longDescription: PortableTextBlock[];
-  projectRepos: ProjectReposProps;
+  projectLinks: ProjectReposProps;
 };

@@ -45,13 +45,13 @@ const project = {
       validation: (rule) => rule.required(),
     }),
     {
-      name: "projectRepos",
-      title: "Project Repositories",
+      name: "projectLinks",
+      title: "Project Links",
       type: "object",
       fields: [
         {
           name: "github",
-          title: "Github URL",
+          title: "Github Repo",
           type: "url",
           initialValue: "https://github.com/",
         },

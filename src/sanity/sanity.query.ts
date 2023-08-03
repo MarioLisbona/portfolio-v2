@@ -29,7 +29,7 @@ export async function getProjects() {
       tech,
       shortDescription,
       longDescription,
-      projectRepos
+      projectLinks
     }`
   );
 }

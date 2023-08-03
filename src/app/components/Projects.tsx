@@ -8,7 +8,6 @@ import { projectsData } from "../constants/projectsData";
 import { ProjectType } from "@/types";
 
 const Projects = ({ projects }: { projects: ProjectType[] }) => {
-  console.log(projects);
   return (
     <Box id={"projects"} pt={"70px"} mt={"-70px"}>
       <SectionContainer>
