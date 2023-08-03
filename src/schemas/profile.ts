@@ -67,7 +67,7 @@ const profile = {
       type: "file",
     },
     {
-      name: "socialLInks",
+      name: "socialLinks",
       title: "Social Links",
       type: "object",
       description: "Add your social media links",
