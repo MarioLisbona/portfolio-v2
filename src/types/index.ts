@@ -40,5 +40,6 @@ export type ProjectType = {
   tech: string;
   shortDescription: string;
   longDescription: PortableTextBlock[];
-  projectLinks: ProjectReposProps;
+  github: string;
+  liveSite: string;
 };

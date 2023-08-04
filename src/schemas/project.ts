@@ -51,23 +51,17 @@ const project = {
       of: [{ type: "block" }],
       validation: (rule) => rule.required(),
     }),
-    {
-      name: "projectLinks",
-      title: "Project Links",
-      type: "object",
-      fields: [
-        {
-          name: "github",
-          title: "Github Repo",
-          type: "url",
-        },
-        {
-          name: "liveSite",
-          title: "Live Site",
-          type: "url",
-        },
-      ],
-    },
+    defineField({
+      name: "github",
+      title: "Github Repo URL",
+      type: "url",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "liveSite",
+      title: "Live Site URL",
+      type: "string",
+    }),
   ],
 };
 export default project;

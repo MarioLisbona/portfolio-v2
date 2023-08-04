@@ -77,8 +77,8 @@ const ProjectModal = ({
           </Text>
           <Flex>
             <Flex me={"1rem"} align={"center"}>
-              {project.projectLinks.github && (
-                <Link href={project.projectLinks.github} target={"_blank"}>
+              {project.github && (
+                <Link href={project.github} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
                       color={"white"}
@@ -94,8 +94,8 @@ const ProjectModal = ({
               )}
             </Flex>
             <Flex align={"center"}>
-              {project.projectLinks.liveSite && (
-                <Link href={project.projectLinks.liveSite} target={"_blank"}>
+              {project.liveSite && (
+                <Link href={project.liveSite} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
                       color={"white"}
