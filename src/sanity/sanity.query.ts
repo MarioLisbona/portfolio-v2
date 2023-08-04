@@ -34,3 +34,16 @@ export async function getProjects() {
     }`
   );
 }
+
+export async function getExperiences() {
+  return client.fetch(groq`*[_type == "experience"] | order(startDate asc) {
+    _id,
+    company,
+    startDate,
+    endDate,
+    title,
+    location,
+    role,
+    techStack
+  }`);
+}
