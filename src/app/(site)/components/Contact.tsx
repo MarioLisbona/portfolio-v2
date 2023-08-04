@@ -41,7 +41,7 @@ const Contact = ({ profile }: { profile: ProfileType }) => {
                   <CustomIcon icon={MdEmail} me={"0.5rem"} />
                 </Flex>
                 <Flex>
-                  <Text textStyle={"contextBold"}>mario.lisbona@gmail.com</Text>
+                  <Text textStyle={"contextBold"}>{profile.email}</Text>
                 </Flex>
               </Flex>
             </Link>
