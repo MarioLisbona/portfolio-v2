@@ -10,9 +10,7 @@ import {
   ListItem,
   ListIcon,
 } from "@chakra-ui/react";
-import { ExperienceDataProps } from "../constants/ExperienceData";
 import TechBox from "./TechBox";
-import Parser from "html-react-parser";
 import { Reveal } from "./Reveal";
 import { MdCheckCircle } from "react-icons/md";
 import { ExperienceType } from "@/types";
