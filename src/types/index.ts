@@ -43,3 +43,14 @@ export type ProjectType = {
   github: string;
   liveSite: string;
 };
+
+export type ExperienceType = {
+  _id: string;
+  company: string;
+  startDate: string;
+  endDate: string;
+  title: string;
+  location: string;
+  role: PortableTextBlock[];
+  techStack: string[];
+};
