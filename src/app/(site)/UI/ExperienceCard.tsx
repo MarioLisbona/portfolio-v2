@@ -15,8 +15,11 @@ import TechBox from "./TechBox";
 import Parser from "html-react-parser";
 import { Reveal } from "./Reveal";
 import { MdCheckCircle } from "react-icons/md";
+import { ExperienceType } from "@/types";
+import { PortableText } from "@portabletext/react";
+import moment from "moment";
 
-const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
+const ExperienceCard = ({ exp }: { exp: ExperienceType }) => {
   return (
     <Reveal>
       <Card
@@ -30,7 +33,9 @@ const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
             <Flex w={"100%"} justify={"space-between"} mb={"0.5rem"}>
               <Text textStyle={"extraSmallHeadingBold"}>{exp.company}</Text>
               <Text textStyle={"extraSmallHeadingBold"} textAlign={"right"}>
-                {exp.dates}
+                {`${moment(exp.startDate).format("MMM Do YYYY")} - ${moment(
+                  exp.endDate
+                ).format("MMM Do YYYY")}`}
               </Text>
             </Flex>
             <Flex w={"100%"} justify={"space-between"} mb={"0.5rem"}>
@@ -41,25 +46,29 @@ const ExperienceCard = ({ exp }: { exp: ExperienceDataProps }) => {
                 {exp.location}
               </Text>
             </Flex>
-            <UnorderedList m={"0rem"}>
-              {exp.description.map((item, idx) => (
-                <Reveal key={idx}>
-                  <ListItem>
-                    <Flex
-                      align={"flex-start"}
-                      mb={{ base: "0.25rem", md: "0.5rem" }}
-                    >
-                      <ListIcon
-                        as={MdCheckCircle}
-                        color={"tan"}
-                        mt={"0.25rem"}
-                      />
-                      <Text textStyle={"context"}>{Parser(item)}</Text>
-                    </Flex>
-                  </ListItem>
-                </Reveal>
-              ))}
-            </UnorderedList>
+            {
+              <UnorderedList m={"0rem"}>
+                {exp.role.map((item, idx) => (
+                  <Reveal key={idx}>
+                    <ListItem>
+                      <Flex
+                        align={"flex-start"}
+                        mb={{ base: "0.25rem", md: "0.5rem" }}
+                      >
+                        <ListIcon
+                          as={MdCheckCircle}
+                          color={"tan"}
+                          mt={"0.25rem"}
+                        />
+                        <Text as={"span"} textStyle={"context"}>
+                          <PortableText value={item} />
+                        </Text>
+                      </Flex>
+                    </ListItem>
+                  </Reveal>
+                ))}
+              </UnorderedList>
+            }
             <Flex>
               <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
                 {exp.techStack.map((tech, idx) => (

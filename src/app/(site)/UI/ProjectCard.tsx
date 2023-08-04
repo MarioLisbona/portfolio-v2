@@ -8,8 +8,9 @@ import {
   Button,
   useColorModeValue,
   useDisclosure,
-  Image,
+  // Image,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
 import SocialIcon from "./SocialIcon";
@@ -18,8 +19,9 @@ import { ProjectDataProps } from "../constants/projectsData";
 import ProjectModal from "./ProjectModal";
 import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";
+import { ProjectType } from "@/types";
 
-const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
+const ProjectCard = ({ project }: { project: ProjectType }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -44,9 +46,10 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
                   }}
                 >
                   <Image
-                    src={project.thumbnail}
+                    src={project.thumbnail.image}
                     width={600}
-                    alt={`Screenshot of ${project.title} project`}
+                    height={600}
+                    alt={project.thumbnail.alt}
                   />
                 </motion.div>
               </CardBody>
@@ -67,21 +70,21 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
                   </Text>
                 </Reveal>
                 <Flex>
-                  {project.repo && (
+                  {project.github && (
                     <Reveal>
-                      <SocialIcon href={project.repo!}>
+                      <SocialIcon href={project.github}>
                         <CustomIcon
                           color={"sage"}
                           icon={SiGithub}
-                          me={project.site ? "1rem" : "0rem"}
+                          me={project.liveSite ? "1rem" : "0rem"}
                           label={"Project Github"}
                         />
                       </SocialIcon>
                     </Reveal>
                   )}
-                  {project.site && (
+                  {project.liveSite && (
                     <Reveal>
-                      <SocialIcon href={project.site!}>
+                      <SocialIcon href={project.liveSite!}>
                         <CustomIcon
                           color={"sage"}
                           icon={LuExternalLink}
@@ -100,7 +103,7 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
                 </Reveal>
               </Flex>
               <Reveal>
-                <Text textStyle={"context"}>{project.intro}</Text>
+                <Text textStyle={"context"}>{project.shortDescription}</Text>
               </Reveal>
               <Flex justify={"flex-start"}>
                 <Reveal>

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SectionContainer from "./SectionContainer";
 import CenterHeader from "../UI/CenterHeader";
@@ -5,8 +6,9 @@ import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 import CustomIcon from "../UI/CustomIcon";
 import { Reveal } from "../UI/Reveal";
+import { ProfileType } from "@/types";
 
-const Contact = () => {
+const Contact = ({ profile }: { profile: ProfileType }) => {
   return (
     <Box id={"contact"} pt={"70px"} mt={"-70px"}>
       <SectionContainer>
@@ -20,10 +22,7 @@ const Contact = () => {
           <Reveal>
             <Text textAlign={"center"} textStyle={"context"}>
               Shoot me an email if you want to connect! You can also find me on{" "}
-              <Link
-                href={"https://www.linkedin.com/in/mariolisbona/"}
-                target={"_blank"}
-              >
+              <Link href={profile.socialLinks.linkedin} target={"_blank"}>
                 <Button variant={"link"}>
                   <Text textStyle={"context"}>Linkedin</Text>
                 </Button>{" "}
@@ -33,7 +32,7 @@ const Contact = () => {
           </Reveal>
           <Reveal>
             <Link
-              href={"mailto:mario.lisbona@gmail.com"}
+              href={`mailto:${profile.email}`}
               _hover={{ color: "tan" }}
               target={"_blank"}
             >

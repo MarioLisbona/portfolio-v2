@@ -5,10 +5,11 @@ import {
   Button,
   Text,
   Flex,
-  Image,
+  // Image,
   Link,
   Icon,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
 import { MdOutlineClose } from "react-icons/md";
@@ -16,6 +17,8 @@ import Parser from "html-react-parser";
 import { ProjectDataProps } from "../constants/projectsData";
 import CustomIcon from "./CustomIcon";
 import FullStopIcon from "./FullStopIcon";
+import { ProjectType } from "@/types";
+import { PortableText } from "@portabletext/react";
 const ProjectModal = ({
   isOpen,
   onClose,
@@ -23,7 +26,7 @@ const ProjectModal = ({
 }: {
   isOpen: boolean;
   onClose: () => void;
-  project: ProjectDataProps;
+  project: ProjectType;
 }) => {
   const CustomOverlay = () => (
     <ModalOverlay
@@ -42,10 +45,11 @@ const ProjectModal = ({
       <CustomOverlay />
       <ModalContent borderRadius={"1rem"} minWidth="fit-content">
         <Image
-          borderTopRadius={"1rem"}
-          src={project.thumbnail}
+          style={{ borderRadius: "1rem 1rem 0 0" }}
+          src={project.thumbnail.image}
           width={900}
-          alt={`Screenshot of ${project.title} project`}
+          height={600}
+          alt={project.thumbnail.alt}
         />
         <Flex
           direction={"column"}
@@ -53,8 +57,8 @@ const ProjectModal = ({
           bg={"blackAlpha.800"}
           p={"2rem"}
           maxW={"900px"}
-          maxH={"500px"}
-          overflowY={"scroll"}
+          // maxH={"500px"}
+          // overflowY={"scroll"}
         >
           <Text color={"white"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             {project.title}
@@ -62,17 +66,19 @@ const ProjectModal = ({
           <Text color={"tan"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             {project.tech}
           </Text>
-          <Text color={"white"} textStyle={"context"} mb={"1rem"}>
-            {Parser(project.content)}
-          </Text>
+          {project.longDescription.map((para, idx) => (
+            <Text key={idx} color={"white"} textStyle={"context"} mb={"1rem"}>
+              <PortableText value={para} />
+            </Text>
+          ))}
           <Text color={"white"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             Project Links
             <FullStopIcon header modal />
           </Text>
           <Flex>
             <Flex me={"1rem"} align={"center"}>
-              {project.repo && (
-                <Link href={project.repo!} target={"_blank"}>
+              {project.github && (
+                <Link href={project.github} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
                       color={"white"}
@@ -88,8 +94,8 @@ const ProjectModal = ({
               )}
             </Flex>
             <Flex align={"center"}>
-              {project.site && (
-                <Link href={project.site!} target={"_blank"}>
+              {project.liveSite && (
+                <Link href={project.liveSite} target={"_blank"}>
                   <Button variant={"linkBtn"}>
                     <CustomIcon
                       color={"white"}

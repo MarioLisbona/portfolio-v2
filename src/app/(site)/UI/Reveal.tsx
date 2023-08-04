@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { Box } from "@chakra-ui/react";
@@ -21,7 +22,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
     }
   }, [isInView]);
   return (
-    <Box ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
@@ -51,6 +52,6 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
           zIndex: 20,
         }}
       />
-    </Box>
+    </div>
   );
 };

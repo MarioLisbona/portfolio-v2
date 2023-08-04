@@ -37,7 +37,7 @@ export const projectsData: ProjectDataProps[] = [
     intro:
       "A Python Webserver for a Forum API with authentication and CRUD functionality",
     content:
-      "I designed this API web server that was developed with Python, Flask and PostgreSQL.<br><br>It gives the users access to full CRUD operations on the data stored in the database.<br><br>Users are authenticated with JWT tokens after they have successfully registered to the platform. Registered users can make posts to a variety of channels in the forum, reply to posts and delete their own posts and replies.<br><br>Users with administration rights can delete any post or reply, issue warnings to users and delete users from the forum. There is also an endpoint to display forum statistics.",
+      "I designed and built this API web server that was developed with Python, Flask and PostgreSQL.<br><br>It gives the users access to full CRUD operations on the data stored in the database.<br><br>Users are authenticated with JWT tokens after they have successfully registered to the platform. Registered users can make posts to a variety of channels in the forum, reply to posts and delete their own posts and replies.<br><br>Users with administration rights can delete any post or reply, issue warnings to users and delete users from the forum. There is also an endpoint to display forum statistics.",
     repo: "https://github.com/MarioLisbona/CA-T2A2-API-Webserver",
   },
   {

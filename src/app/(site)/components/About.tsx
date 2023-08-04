@@ -11,8 +11,10 @@ import Header from "../UI/Header";
 import CustomIcon from "../UI/CustomIcon";
 import SocialIcon from "../UI/SocialIcon";
 import { Reveal } from "../UI/Reveal";
+import { ProfileType } from "@/types";
+import { PortableText } from "@portabletext/react";
 
-const About = () => {
+const About = ({ profile }: { profile: ProfileType }) => {
   return (
     <Box
       id={"about"}
@@ -28,12 +30,10 @@ const About = () => {
         >
           <Reveal>
             <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
-              {aboutContent.content.map((para, idx) => (
-                <Reveal key={idx}>
-                  <Text textStyle={"context"} my={"1rem"}>
-                    {para}
-                  </Text>
-                </Reveal>
+              {profile.fullBio.map((para, idx) => (
+                <Text as={"span"} key={idx} textStyle={"context"} my={"1rem"}>
+                  <PortableText value={para} />
+                </Text>
               ))}
             </Flex>
           </Reveal>
@@ -50,11 +50,11 @@ const About = () => {
               </Flex>
             </Reveal>
             <Wrap mt={"1rem"} justify={{ base: "flex-start", xl: "center" }}>
-              {techStack.map((item, idx) => (
+              {profile.skills.map((item, idx) => (
                 <Reveal key={idx}>
                   <WrapItem>
                     <TechBox>
-                      <Text textStyle={"smBold"}>{item.label}</Text>
+                      <Text textStyle={"smBold"}>{item}</Text>
                     </TechBox>
                   </WrapItem>
                 </Reveal>
@@ -72,7 +72,7 @@ const About = () => {
             <CustomIcon color={"coolGray"} icon={PiArrowRightBold} />
           </Reveal>
           <Reveal>
-            <SocialIcon href={"https://www.linkedin.com/in/mariolisbona/"}>
+            <SocialIcon href={profile.socialLinks.linkedin}>
               <CustomIcon
                 color={"sage"}
                 icon={SiLinkedin}
@@ -81,7 +81,7 @@ const About = () => {
             </SocialIcon>
           </Reveal>
           <Reveal>
-            <SocialIcon href={"https://github.com/MarioLisbona/"}>
+            <SocialIcon href={profile.socialLinks.github}>
               <CustomIcon
                 color={"sage"}
                 icon={SiGithub}
@@ -90,7 +90,7 @@ const About = () => {
             </SocialIcon>
           </Reveal>
           <Reveal>
-            <SocialIcon href={"https://www.instagram.com/muzzza79/"}>
+            <SocialIcon href={profile.socialLinks.instagram}>
               <CustomIcon
                 color={"sage"}
                 icon={SiInstagram}

@@ -15,11 +15,11 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { navbarLinks } from "../constants/links";
-import logo from "../../../public/images/ml-logo.png";
-import darkLogo from "../../../public/images/ml-logo-dark.png";
+import logo from "../../../../public/images/ml-logo.png";
+import darkLogo from "../../../../public/images/ml-logo-dark.png";
 import { handleLinkClick, handleMobileNavClick } from "../lib/utils";
 
-export default function Navbar() {
+export default function Navbar({ resume }: { resume: string }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -85,12 +85,7 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Link
-              href={
-                "https://drive.google.com/file/d/1S-5o1ySPBNrgspbyKLNuya6tIpixHI_o/view?usp=drive_link"
-              }
-              target={"_blank"}
-            >
+            <Link href={resume} target={"_blank"}>
               <Button
                 display={{ base: "none", md: "inline-block" }}
                 variant={"filledSqBtn"}
