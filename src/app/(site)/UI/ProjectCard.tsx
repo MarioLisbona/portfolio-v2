@@ -8,14 +8,12 @@ import {
   Button,
   useColorModeValue,
   useDisclosure,
-  // Image,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
 import SocialIcon from "./SocialIcon";
 import CustomIcon from "./CustomIcon";
-import { ProjectDataProps } from "../constants/projectsData";
 import ProjectModal from "./ProjectModal";
 import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";

@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { Box } from "@chakra-ui/react";
 
 interface Props {
   children: JSX.Element;
@@ -20,6 +19,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
       mainControls.start("visible");
       slideControls.start("visible");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>

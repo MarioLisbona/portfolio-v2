@@ -5,7 +5,6 @@ import {
   Button,
   Text,
   Flex,
-  // Image,
   Link,
   Icon,
 } from "@chakra-ui/react";
@@ -13,8 +12,6 @@ import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { LuExternalLink } from "react-icons/lu";
 import { MdOutlineClose } from "react-icons/md";
-import Parser from "html-react-parser";
-import { ProjectDataProps } from "../constants/projectsData";
 import CustomIcon from "./CustomIcon";
 import FullStopIcon from "./FullStopIcon";
 import { ProjectType } from "@/types";

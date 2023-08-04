@@ -5,8 +5,6 @@ import { BsTerminalFill } from "react-icons/bs";
 import { PiArrowRightBold } from "react-icons/pi";
 import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
 import TechBox from "../UI/TechBox";
-import { techStack } from "../constants/techStack";
-import { aboutContent } from "../constants/aboutContent";
 import Header from "../UI/Header";
 import CustomIcon from "../UI/CustomIcon";
 import SocialIcon from "../UI/SocialIcon";
