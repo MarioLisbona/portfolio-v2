@@ -43,25 +43,6 @@ const ExperienceCard = ({ exp }: { exp: ExperienceType }) => {
                 {exp.location}
               </Text>
             </Flex>
-            {/* <UnorderedList m={"0rem"}>
-              {exp.description.map((item, idx) => (
-                <Reveal key={idx}>
-                  <ListItem>
-                    <Flex
-                      align={"flex-start"}
-                      mb={{ base: "0.25rem", md: "0.5rem" }}
-                    >
-                      <ListIcon
-                        as={MdCheckCircle}
-                        color={"tan"}
-                        mt={"0.25rem"}
-                      />
-                      <Text textStyle={"context"}>{Parser(item)}</Text>
-                    </Flex>
-                  </ListItem>
-                </Reveal>
-              ))}
-            </UnorderedList> */}
             {
               <UnorderedList m={"0rem"}>
                 {exp.role.map((item, idx) => (
