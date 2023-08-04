@@ -4,7 +4,6 @@ import SectionContainer from "./SectionContainer";
 import Header from "../UI/Header";
 import { Flex, Box } from "@chakra-ui/react";
 import ExperienceCard from "../UI/ExperienceCard";
-import { experienceData } from "../constants/ExperienceData";
 import { ExperienceType } from "@/types";
 
 const Experience = ({ experiences }: { experiences: ExperienceType[] }) => {
