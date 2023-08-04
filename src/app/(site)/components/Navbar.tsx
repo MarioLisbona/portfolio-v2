@@ -121,12 +121,7 @@ export default function Navbar({ resume }: { resume: string }) {
                 </Link>
               ))}
               <Flex>
-                <Link
-                  href={
-                    "https://drive.google.com/file/d/1S-5o1ySPBNrgspbyKLNuya6tIpixHI_o/view?usp=drive_link"
-                  }
-                  target={"_blank"}
-                >
+                <Link href={resume} target={"_blank"}>
                   <Button variant={"filledSqBtn"} me={"1rem"}>
                     My Resume
                   </Button>
