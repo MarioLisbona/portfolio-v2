@@ -17,6 +17,7 @@ import { Reveal } from "./Reveal";
 import { MdCheckCircle } from "react-icons/md";
 import { ExperienceType } from "@/types";
 import { PortableText } from "@portabletext/react";
+import moment from "moment";
 
 const ExperienceCard = ({ exp }: { exp: ExperienceType }) => {
   return (
@@ -32,7 +33,9 @@ const ExperienceCard = ({ exp }: { exp: ExperienceType }) => {
             <Flex w={"100%"} justify={"space-between"} mb={"0.5rem"}>
               <Text textStyle={"extraSmallHeadingBold"}>{exp.company}</Text>
               <Text textStyle={"extraSmallHeadingBold"} textAlign={"right"}>
-                {`${exp.startDate} - ${exp.endDate}`}
+                {`${moment(exp.startDate).format("MMM Do YYYY")} - ${moment(
+                  exp.endDate
+                ).format("MMM Do YYYY")}`}
               </Text>
             </Flex>
             <Flex w={"100%"} justify={"space-between"} mb={"0.5rem"}>
