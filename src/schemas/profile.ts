@@ -19,12 +19,6 @@ const profile = {
       type: "string",
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: "headline",
-      title: "Headline",
-      type: "string",
-      validation: (rule) => rule.required(),
-    }),
     {
       name: "profileImage",
       title: "Profile Image",
