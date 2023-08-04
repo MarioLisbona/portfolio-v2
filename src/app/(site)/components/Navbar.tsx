@@ -15,8 +15,8 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { navbarLinks } from "../constants/links";
-import logo from "../../../public/images/ml-logo.png";
-import darkLogo from "../../../public/images/ml-logo-dark.png";
+import logo from "../../../../public/images/ml-logo.png";
+import darkLogo from "../../../../public/images/ml-logo-dark.png";
 import { handleLinkClick, handleMobileNavClick } from "../lib/utils";
 
 export default function Navbar({ resume }: { resume: string }) {
