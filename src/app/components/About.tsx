@@ -31,11 +31,11 @@ const About = ({ profile }: { profile: ProfileType }) => {
           <Reveal>
             <Flex w={{ base: "100%", xl: "70%" }} direction={"column"}>
               {profile.fullBio.map((para, idx) => (
-                <Reveal key={idx}>
-                  <Text as={"span"} textStyle={"context"} my={"1rem"}>
-                    <PortableText value={para} />
-                  </Text>
-                </Reveal>
+                // <Reveal key={idx}>
+                <Text as={"span"} key={idx} textStyle={"context"} my={"1rem"}>
+                  <PortableText value={para} />
+                </Text>
+                // </Reveal>
               ))}
             </Flex>
           </Reveal>
