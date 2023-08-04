@@ -29,7 +29,8 @@ export async function getProjects() {
       tech,
       shortDescription,
       longDescription,
-      projectLinks
+      github,
+      liveSite
     }`
   );
 }

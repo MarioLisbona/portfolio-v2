@@ -17,6 +17,7 @@ const project = {
       title: "Thumbnail",
       type: "image",
       description: "Upload an image for the project",
+      validation: (rule) => rule.required(),
       fields: [
         {
           name: "alt",
@@ -25,11 +26,12 @@ const project = {
         },
       ],
     }),
-    {
+    defineField({
       name: "buildDate",
       title: "Build date",
       type: "date",
-    },
+      validation: (rule) => rule.required(),
+    }),
     defineField({
       name: "tech",
       title: "Tech",
@@ -49,24 +51,17 @@ const project = {
       of: [{ type: "block" }],
       validation: (rule) => rule.required(),
     }),
-    {
-      name: "projectLinks",
-      title: "Project Links",
-      type: "object",
-      fields: [
-        {
-          name: "github",
-          title: "Github Repo",
-          type: "url",
-          initialValue: "https://github.com/",
-        },
-        {
-          name: "liveSite",
-          title: "Live Site",
-          type: "url",
-        },
-      ],
-    },
+    defineField({
+      name: "github",
+      title: "Github Repo URL",
+      type: "url",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "liveSite",
+      title: "Live Site URL",
+      type: "string",
+    }),
   ],
 };
 export default project;

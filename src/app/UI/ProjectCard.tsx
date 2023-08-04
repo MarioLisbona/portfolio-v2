@@ -70,21 +70,21 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                   </Text>
                 </Reveal>
                 <Flex>
-                  {project.projectLinks.github && (
+                  {project.github && (
                     <Reveal>
-                      <SocialIcon href={project.projectLinks.github}>
+                      <SocialIcon href={project.github}>
                         <CustomIcon
                           color={"sage"}
                           icon={SiGithub}
-                          me={project.projectLinks.liveSite ? "1rem" : "0rem"}
+                          me={project.liveSite ? "1rem" : "0rem"}
                           label={"Project Github"}
                         />
                       </SocialIcon>
                     </Reveal>
                   )}
-                  {project.projectLinks.liveSite && (
+                  {project.liveSite && (
                     <Reveal>
-                      <SocialIcon href={project.projectLinks.liveSite!}>
+                      <SocialIcon href={project.liveSite!}>
                         <CustomIcon
                           color={"sage"}
                           icon={LuExternalLink}
