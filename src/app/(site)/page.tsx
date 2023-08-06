@@ -8,9 +8,9 @@ import { getExperiences, getProfile, getProjects } from "@/sanity/sanity.query";
 import { ExperienceType, ProfileType, ProjectType } from "@/types";
 
 export default async function Home() {
-  const profile: ProfileType = await getProfile();
-  const projects: ProjectType[] = await getProjects();
-  const experiences: ExperienceType[] = await getExperiences();
+  const profile = await getProfile();
+  const projects = await getProjects();
+  const experiences = await getExperiences();
 
   return (
     <SectionContainer>
