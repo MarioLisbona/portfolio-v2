@@ -7,6 +7,7 @@ import {
   Flex,
   Link,
   Icon,
+  Box,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { SiGithub } from "react-icons/si";
@@ -60,9 +61,21 @@ const ProjectModal = ({
           <Text color={"white"} textStyle={"smallHeadingBold"} mb={"1rem"}>
             {project.title}
           </Text>
-          <Text color={"tan"} textStyle={"smallHeadingBold"} mb={"1rem"}>
-            {project.tech}
-          </Text>
+          <Flex w={"100%"} justify={"flex-start"} mb={"1rem"}>
+            {project.tech.map((tech, idx) => (
+              <Box key={idx}>
+                {idx < project.tech.length - 1 ? (
+                  <Text textStyle={"smallHeadingBold"} color={"tan"}>
+                    {`${tech}-`}
+                  </Text>
+                ) : (
+                  <Text textStyle={"smallHeadingBold"} color={"tan"}>
+                    {tech}
+                  </Text>
+                )}
+              </Box>
+            ))}
+          </Flex>
           {project.longDescription.map((para, idx) => (
             <Text key={idx} color={"white"} textStyle={"context"} mb={"1rem"}>
               <PortableText value={para} />

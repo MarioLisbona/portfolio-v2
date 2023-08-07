@@ -21,8 +21,6 @@ import { ProjectType } from "@/types";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  console.log(project.tech);
   return (
     <>
       <Flex direction={"column"}>
