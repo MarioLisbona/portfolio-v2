@@ -21,6 +21,8 @@ import { ProjectType } from "@/types";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  console.log(project.tech);
   return (
     <>
       <Flex direction={"column"}>
@@ -94,13 +96,19 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                 </Flex>
               </Flex>
               <Flex w={"100%"} justify={"flex-start"}>
-                {/* {project.tech.map((tech, idx) => (
+                {project.tech.map((tech, idx) => (
                   <Reveal key={idx}>
-                    <Text textStyle={"smBold"} color={"tan"}>
-                      {project.tech}
-                    </Text>
+                    {idx < project.tech.length - 1 ? (
+                      <Text textStyle={"smBold"} color={"tan"}>
+                        {`${tech}-`}
+                      </Text>
+                    ) : (
+                      <Text textStyle={"smBold"} color={"tan"}>
+                        {tech}
+                      </Text>
+                    )}
                   </Reveal>
-                ))} */}
+                ))}
               </Flex>
               <Reveal>
                 <Text textStyle={"context"}>{project.shortDescription}</Text>
