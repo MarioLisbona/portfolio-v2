@@ -37,7 +37,7 @@ export type ProjectType = {
     image: string;
   };
   buildDate: string;
-  tech: string;
+  tech: string[];
   shortDescription: string;
   longDescription: PortableTextBlock[];
   github: string;

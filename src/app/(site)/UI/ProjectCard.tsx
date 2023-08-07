@@ -94,11 +94,19 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                 </Flex>
               </Flex>
               <Flex w={"100%"} justify={"flex-start"}>
-                <Reveal>
-                  <Text textStyle={"smBold"} color={"tan"}>
-                    {project.tech}
-                  </Text>
-                </Reveal>
+                {project.tech.map((tech, idx) => (
+                  <Reveal key={idx}>
+                    {idx < project.tech.length - 1 ? (
+                      <Text textStyle={"smBold"} color={"tan"}>
+                        {`${tech}-`}
+                      </Text>
+                    ) : (
+                      <Text textStyle={"smBold"} color={"tan"}>
+                        {tech}
+                      </Text>
+                    )}
+                  </Reveal>
+                ))}
               </Flex>
               <Reveal>
                 <Text textStyle={"context"}>{project.shortDescription}</Text>

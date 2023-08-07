@@ -35,7 +35,9 @@ const project = {
     defineField({
       name: "tech",
       title: "Tech",
-      type: "string",
+      type: "array",
+      of: [{ type: "string" }],
+      description: "Add a list of technologies used on the project",
       validation: (rule) => rule.required(),
     }),
     defineField({
