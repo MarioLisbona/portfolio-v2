@@ -32,7 +32,7 @@ const theme = extendTheme({
     },
     smallHeadingBold: {
       fontFamily: "headingBold",
-      fontSize: ["18px", "20px", "32px"],
+      fontSize: ["18px", "20px", "30px"],
       lineHeight: "135%",
     },
     extraSmallHeadingBold: {
