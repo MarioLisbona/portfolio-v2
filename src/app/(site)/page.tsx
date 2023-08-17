@@ -12,6 +12,8 @@ export default async function Home() {
   const projects = await getProjects();
   const experiences = await getExperiences();
 
+  console.log(profile);
+
   return (
     <SectionContainer>
       <Hero profile={profile} />
