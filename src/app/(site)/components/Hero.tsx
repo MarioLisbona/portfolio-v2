@@ -31,6 +31,7 @@ export default function Hero({ profile }: { profile: ProfileType }) {
           <Reveal>
             <Text textStyle={"subheadingBold"}>
               <Highlight
+                data-testid="heading"
                 styles={{
                   color: "tan",
                 }}
