@@ -1,24 +1,14 @@
 import React from "react";
-import { Card } from "@chakra-ui/react";
+import { Card, useColorModeValue } from "@chakra-ui/react";
 
 const HorizontalLine = () => {
   return (
     <Card
-      bg={"transparent"}
+      bg={useColorModeValue("gray.800", "white")}
       w={"80%"}
-      h={"30px"}
+      h={{ base: "1px", md: "3px" }}
       align={"center"}
       variant={"unstyled"}
-      _before={{
-        content: "''",
-        position: "absolute",
-        top: "50%",
-        left: 0,
-        borderTop: "1px solid black",
-        background: "black",
-        width: "100%",
-        transform: "translateY(-50%)",
-      }}
     ></Card>
   );
 };
