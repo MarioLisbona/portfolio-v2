@@ -11,7 +11,7 @@ const FullStopIcon = ({
   return (
     <Icon
       ms={{ base: "2px", md: "5px" }}
-      mb={header ? "0rem" : { base: "6px", md: "23px" }}
+      mb={header ? "0rem" : { base: "0", md: "14px", lg: "16px" }}
       as={FaCircle}
       w={modal ? "8px" : { base: "8px", md: "12px", lg: "16px" }}
       h={modal ? "8px" : { base: "8px", md: "12px", lg: "16px" }}
