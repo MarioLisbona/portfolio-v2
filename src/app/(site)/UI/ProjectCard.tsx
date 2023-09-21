@@ -28,11 +28,13 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           <Card
             maxW="lg"
             bg={useColorModeValue("ivory", "whiteAlpha.50")}
-            boxShadow={"xl"}
             borderRadius={"1rem"}
           >
             <Link onClick={onOpen}>
-              <CardBody paddingBottom={0}>
+              <CardBody
+                maxHeight={{ base: "160px", md: "220px", lg: "280px" }}
+                paddingBottom={0}
+              >
                 <motion.div
                   whileHover={{
                     scale: 1.03,
