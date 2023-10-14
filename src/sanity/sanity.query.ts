@@ -37,7 +37,7 @@ export async function getProjects(): Promise<ProjectType[]> {
 }
 
 export async function getExperiences(): Promise<ExperienceType[]> {
-  return client.fetch(groq`*[_type == "experience"] | order(startDate asc) {
+  return client.fetch(groq`*[_type == "experience"] | order(startDate desc) {
     _id,
     company,
     startDate,
