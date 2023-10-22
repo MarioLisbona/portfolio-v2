@@ -1,5 +1,5 @@
 "use client";
-import { Text, useColorModeValue, Flex } from "@chakra-ui/react";
+import { Text, useColorModeValue, Flex, Button, Link } from "@chakra-ui/react";
 import SocialIcon from "../UI/SocialIcon";
 import CustomIcon from "../UI/CustomIcon";
 import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
@@ -7,6 +7,7 @@ import { SiGithub, SiLinkedin, SiInstagram } from "react-icons/si";
 export default function Footer() {
   return (
     <Flex
+      direction={{ base: "column", md: "row" }}
       px={{ base: "1rem", lg: "1rem" }}
       py={{ base: ".25rem", lg: "1rem" }}
       justify={"space-between"}
@@ -17,7 +18,7 @@ export default function Footer() {
       boxShadow="dark-lg"
       blur={"10px"}
     >
-      <Flex>
+      <Flex py={{ base: ".5rem", md: "0rem" }}>
         <SocialIcon href={"https://www.linkedin.com/in/mariolisbona/"}>
           <CustomIcon
             color={useColorModeValue("black", "white")}
@@ -40,7 +41,23 @@ export default function Footer() {
           />
         </SocialIcon>
       </Flex>
-      <Text textStyle={"smContext"}>© 2023 Mario Lisbona</Text>
+      <Flex direction={"column"} align={{ base: "center", md: "flex-end" }}>
+        <Text textStyle={"smContext"}>© 2023 Mario Lisbona</Text>
+        <Text textStyle={"smContext"}>
+          Website built with{" "}
+          <Link href="#">
+            <Button variant={"link"}>
+              <Text textStyle={"smContext"}>NextJS</Text>
+            </Button>
+          </Link>{" "}
+          and{" "}
+          <Link href="#">
+            <Button variant={"link"}>
+              <Text textStyle={"smContext"}>ChakraUI</Text>
+            </Button>
+          </Link>
+        </Text>
+      </Flex>
     </Flex>
   );
 }
