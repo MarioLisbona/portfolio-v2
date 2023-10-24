@@ -45,13 +45,13 @@ export default function Footer() {
         <Text textStyle={"smContext"}>© 2023 Mario Lisbona</Text>
         <Text textStyle={"smContext"}>
           Website built with{" "}
-          <Link href="#">
+          <Link href="https://nextjs.org/" target={"_blank"}>
             <Button variant={"link"}>
               <Text textStyle={"smContext"}>NextJS</Text>
             </Button>
           </Link>{" "}
           and{" "}
-          <Link href="#">
+          <Link href="https://chakra-ui.com/" target={"_blank"}>
             <Button variant={"link"}>
               <Text textStyle={"smContext"}>ChakraUI</Text>
             </Button>
