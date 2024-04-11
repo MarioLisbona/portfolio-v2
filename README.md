@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Find IP address: `ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'`
+
 ## Getting Started
 
 First, run the development server:
