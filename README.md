@@ -58,10 +58,10 @@ COPY . .
 RUN npm run build
 # Set the environment variable to run the Next.js application in production mode
 ENV NODE_ENV production
-ENV PORT 80
+ENV PORT 3000
 
 # Expose the port that the application will run on
-EXPOSE 80
+EXPOSE 3000
 
 # Start the application
 CMD ["npm", "start"]
@@ -91,7 +91,7 @@ docker build -t mariolisbona/portfolio-v2
 4. Run the container locally
 
 ```bash
-docker run -d -p 80:80 mariolisbona/portfolio-v2
+docker run -d -p 3000:3000 mariolisbona/portfolio-v2
 ```
 
 A container hash id will be output to the temrinal. for example `b102339579a505fec3a5c2ac6d0f55fc744c3d6a8b494dd371a797d415034b40`
@@ -115,7 +115,8 @@ docker login
 docker push mariolisbona/portfolio-v2
 ```
 
-2. Create an AWS EC2 instance with a key pair
+1. Create an AWS EC2 instance with a key pair
+2. Use Ubuntu as the OS
 3. Download the key pair and change the permissions to read, write, and execute for this user only
 
 locate the directory of the key pari file `.pem` and change the permissions
@@ -127,13 +128,14 @@ chmod 700 <filename>
 4. ssh into the EC2 instance
 
 ```bash
-ssh -i path/to/key-pair-file.pem ec2-user@<EC2 instance public ip address>
+ssh -i path/to/key-pair-file.pem ubuntu@<EC2 instance public ip address>
 ```
 
-5. Install docker and enable it
+5. Update the instance, install docker and enable it
 
 ```bash
-sudo yum install docker
+sudo apt update
+sudo apt install docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
@@ -147,7 +149,7 @@ sudo docker pull mariolisbona/portfolio-v2
 6. Run the container on your EC2 instance
 
 ```bash
-sudo docker run -d -p 80:80 mariolisbona/portfolio-v2
+sudo docker run -d -p 3000:3000 mariolisbona/portfolio-v2
 ```
 
 A container hash id will be output to the temrinal. for example `b102339579a505fec3a5c2ac6d0f55fc744c3d6a8b494dd371a797d415034b40`
